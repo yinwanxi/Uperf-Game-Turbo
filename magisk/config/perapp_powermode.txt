@@ -1,0 +1,16 @@
+# 分应用性能模式配置
+# Per-app dynamic power mode rule
+# '-' means offscreen rule
+# '*' means default rule
+
+com.tencent.tmgp.sgame performance
+com.miHoYo.Yuanshen performance
+com.tencent.tmgp.pubgmhd performance
+com.miHoYo.bh3.bilibili performance
+com.miHoYo.enterprise.NGHSoD performance
+com.miHoYo.ys.bilibili performance
+com.tencent.lolm performance
+com.ioncannon.cpuburn.gpugflops fast
+com.primatelabs.geekbench5 fast
+- powersave
+* balance

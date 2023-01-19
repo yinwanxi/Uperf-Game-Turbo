@@ -1,0 +1,14 @@
+{
+    "name": "Uperf Game Turbo",
+    "author": "吟惋兮",
+    "version": "️❤️吟惋兮❤️️",
+    "versionCode": 17,
+    "features": {
+        "strict": true,
+        "pedestal": true
+    },
+    "module": "uperf,sfanalysis",
+    "state": "/sdcard/Android/yc/uperf/cur_powermode.txt",
+    "entry": "/data/powercfg.sh",
+    "projectUrl": "https://github.com/yc9559/uperf"
+}

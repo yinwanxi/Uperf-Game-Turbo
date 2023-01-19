@@ -1,0 +1,69 @@
+TMPDIR=/dev/tmp
+MOUNTPATH=/dev/magisk_img
+umask 022
+rm -rf $TMPDIR 2>/dev/null
+mkdir -p $TMPDIR
+say() { echo "$1"; }
+require_new_magisk() {
+  say "***********************************"
+  say " Please install the latest Magisk! "
+  say "***********************************"
+  say " 请   安   装   新   版   面   具！ "
+  say "***********************************"
+  exit 1
+}
+imageless_magisk() {
+  [ $MAGISK_VER_CODE -gt 18100 ]
+  return $?
+}
+mount /data 2>/dev/null
+if [ -f /data/adb/magisk/util_functions.sh ]; then
+  . /data/adb/magisk/util_functions.sh
+  NVBASE=/data/adb
+else
+  require_new_magisk
+fi
+setup_flashable
+mount_partitions
+api_level_arch_detect
+$BOOTMODE && boot_actions || recovery_actions
+unzip -oj "$3" 'Base/*' -d $TMPDIR >&2
+if imageless_magisk; then
+  $BOOTMODE && MODDIRNAME=modules_update || MODDIRNAME=modules
+  MODULEROOT=$NVBASE/$MODDIRNAME
+else
+  $BOOTMODE && IMGNAME=magisk_merge.img || IMGNAME=magisk.img
+  IMG=$NVBASE/$IMGNAME
+  request_zip_size_check "$3"
+  mount_magisk_img
+  MODULEROOT=$MOUNTPATH
+fi
+MODID=`grep_prop id $TMPDIR/module.prop`
+MODPATH=$MODULEROOT/$MODID
+rm -rf $MODPATH 2>/dev/null
+mkdir -p $MODPATH
+
+$BOOTMODE || abort "! Uperf cannot be installed in recovery."
+[ $ARCH == "arm64" ] || abort "! Uperf ONLY support arm64 platform."
+ui_print "- Extracting module files"
+unzip -o "$3" -x 'Base/*' 'META-INF/*' -d $MODPATH >/dev/null
+unzip -oj "$3" 'Base/*' -d $MODPATH >/dev/null
+sh $MODPATH/script/setup.sh
+[ "$?" != "0" ] && abort
+
+cp -af $TMPDIR/module.prop $MODPATH/module.prop
+if $BOOTMODE; then
+  if imageless_magisk; then
+    mktouch $NVBASE/modules/$MODID/update
+    cp -af $TMPDIR/module.prop $NVBASE/modules/$MODID/module.prop
+  else
+    mktouch /sbin/.magisk/img/$MODID/update
+    cp -af $TMPDIR/module.prop /sbin/.magisk/img/$MODID/module.prop
+  fi
+fi
+cd /
+imageless_magisk || unmount_magisk_img
+$BOOTMODE || recovery_cleanup
+rm -rf $TMPDIR $MOUNTPATH $MODPATH/script/setup.sh $MODPATH/script/libsysinfo.sh
+
+exit 0
