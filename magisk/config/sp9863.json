@@ -1,6 +1,6 @@
 {
   "meta": {
-    "name": "kirin710",
+    "name": "Unisoc sp9836",
     "author": "yc@coolapk   ❤️吟惋兮❤"
   },
   "modules": {
@@ -38,20 +38,20 @@
       "enable": true,
       "powerModel": [
         {
-          "efficiency": 100,
+          "efficiency": 110,
           "nr": 4,
           "typicalPower": 0.36,
-          "typicalFreq": 1.7,
-          "sweetFreq": 1.4,
-          "plainFreq": 1.0,
+          "typicalFreq": 1.2,
+          "sweetFreq": 1.0,
+          "plainFreq": 0.9,
           "freeFreq": 0.6
         },
         {
-          "efficiency": 170,
+          "efficiency": 120,
           "nr": 4,
-          "typicalPower": 1.5,
-          "typicalFreq": 2.2,
-          "sweetFreq": 1.7,
+          "typicalPower": 0.45,
+          "typicalFreq": 1.6,
+          "sweetFreq": 1.4,
           "plainFreq": 1.1,
           "freeFreq": 1.1
         }
@@ -440,7 +440,7 @@
       "fastLimitRecoverScale": 0.3,
       "predictThd": 0.3,
       "margin": 0.25,
-      "burst": 0.1,
+      "burst": 0.0,
       "guideCap": true,
       "limitEfficiency": false
     },
@@ -466,7 +466,7 @@
         "cpu.slowLimitPower": 2.0,
         "cpu.fastLimitPower": 2.0,
         "cpu.fastLimitCapacity": 16.0,
-        "cpu.margin": 0.3
+        "cpu.margin": 0.2
       },
       "idle": {
         "cpu.baseSampleTime": 0.04,
@@ -481,7 +481,7 @@
       },
       "trigger": {
         "cpu.latencyTime": 0.0,
-        "cpu.margin": 0.5,
+        "cpu.margin": 0.4,
         "sched.scene": "touch"
       },
       "gesture": {
@@ -506,7 +506,7 @@
         "cpu.latencyTime": 0.4,
         "cpu.slowLimitPower": 1.0,
         "cpu.fastLimitPower": 1.0,
-        "cpu.fastLimitCapacity": 1.0,
+        "cpu.fastLimitCapacity": 4.0,
         "cpu.margin": 0.1
       },
       "idle": {
@@ -522,15 +522,15 @@
       },
       "trigger": {
         "cpu.latencyTime": 0.0,
-        "cpu.margin": 0.2,
+        "cpu.margin": 0.3,
         "sched.scene": "touch"
       },
       "gesture": {
-        "cpu.margin": 0.25,
+        "cpu.margin": 0.6,
         "sched.scene": "touch"
       },
       "junk": {
-        "cpu.burst": 0.1,
+        "cpu.burst": 0.6,
         "sched.scene": "touch"
       },
       "switch": {
@@ -538,7 +538,7 @@
         "cpu.slowLimitPower": 1.5,
         "cpu.fastLimitPower": 2.5,
         "cpu.fastLimitRecoverScale": 0.1,
-        "cpu.margin": 0.2,
+        "cpu.margin": 0.3,
         "sched.scene": "boost"
       }
     },
@@ -585,6 +585,7 @@
         "cpu.slowLimitPower": 999.0,
         "cpu.fastLimitPower": 999.0,
         "cpu.fastLimitCapacity": 999.0,
+        "cpu.margin": 1.0,
         "cpu.burst": 1.0
       },
       "idle": {

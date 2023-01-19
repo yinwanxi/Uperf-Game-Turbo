@@ -41,24 +41,24 @@
           "efficiency": 140, 
           "nr": 3, 
           "typicalPower": 0.5, 
-          "typicalFreq": 2.0, 
-          "sweetFreq": 1.4, 
-          "plainFreq": 1.0, 
+          "typicalFreq": 1.9, 
+          "sweetFreq": 1.6, 
+          "plainFreq": 1.2, 
           "freeFreq": 0.6
         }, 
         {
-          "efficiency": 350, 
+          "efficiency": 320, 
           "nr": 4, 
-          "typicalPower": 1.8, 
-          "typicalFreq": 2.7, 
+          "typicalPower": 1.9, 
+          "typicalFreq": 2.8, 
           "sweetFreq": 1.8, 
           "plainFreq": 1.0, 
           "freeFreq": 0.7
         }, 
         {
-          "efficiency": 430, 
+          "efficiency": 410, 
           "nr": 1, 
-          "typicalPower": 3.4, 
+          "typicalPower": 3.6, 
           "typicalFreq": 3.2, 
           "sweetFreq": 2.2, 
           "plainFreq": 1.6, 
@@ -69,6 +69,7 @@
     "sysfs": {
       "enable": true, 
       "knob": {
+        "cpuFreqMin0":"/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq",
         "cpusetTa": "/dev/cpuset/top-app/cpus", 
         "cpusetFg": "/dev/cpuset/foreground/cpus", 
         "cpusetBg": "/dev/cpuset/background/cpus", 
@@ -268,7 +269,7 @@
           "rules": [
             {
               "k": "^(TaskSnapshot|Greezer|CachedApp|SystemPressure|SensorService)|[Mm]emory", 
-              "ac": "bg", 
+              "ac": "auto", 
               "pc": "auto"
             }, 
             {
@@ -435,21 +436,22 @@
       "baseSampleTime": 0.01, 
       "baseSlackTime": 0.01, 
       "latencyTime": 0.5, 
-      "slowLimitPower": 3.0, 
-      "fastLimitPower": 6.0, 
-      "fastLimitCapacity": 10.0, 
+      "slowLimitPower": 4.0, 
+      "fastLimitPower": 8.0, 
+      "fastLimitCapacity": 12.0, 
       "fastLimitRecoverScale": 0.3, 
       "predictThd": 0.3, 
-      "margin": 0.2, 
-      "burst": 0.0, 
+      "margin": 0.1, 
+      "burst": 0.15, 
       "guideCap": true, 
       "limitEfficiency": false
     }, 
     "sysfs": {
+      "cpuFreqMin0":"0",
       "cpusetTa": "0-7", 
       "cpusetFg": "0-2,5-7", 
-      "cpusetBg": "0-1", 
-      "cpusetSysBg": "1-2", 
+      "cpusetBg": "0-2", 
+      "cpusetSysBg": "0-2", 
       "cpusetRe": "0-6"
     }, 
     "sched": {
@@ -459,16 +461,17 @@
   "presets": {
     "balance": {
       "*": {
+        "sysfs.cpuFreqMin0":"2016000", 
         "cpu.latencyTime": 0.2, 
         "cpu.slowLimitPower": 2.0, 
         "cpu.fastLimitPower": 2.0, 
         "cpu.fastLimitCapacity": 16.0, 
-        "cpu.margin": 0.2
+        "cpu.margin": 0.25
       }, 
       "idle": {
         "cpu.baseSampleTime": 0.04, 
         "cpu.baseSlackTime": 0.08, 
-        "cpu.predictThd": 0.3, 
+        "cpu.predictThd": 0.2, 
         "cpu.limitEfficiency": true, 
         "sched.scene": "idle"
       }, 
@@ -478,11 +481,11 @@
       }, 
       "trigger": {
         "cpu.latencyTime": 0.0, 
-        "cpu.margin": 0.4, 
+        "cpu.margin": 0.3, 
         "sched.scene": "touch"
       }, 
       "gesture": {
-        "cpu.margin": 0.6, 
+        "cpu.margin": 0.4, 
         "sched.scene": "touch"
       }, 
       "junk": {
@@ -491,10 +494,10 @@
       }, 
       "switch": {
         "cpu.latencyTime": 0.0, 
-        "cpu.slowLimitPower": 3.0, 
-        "cpu.fastLimitPower": 5.0, 
+        "cpu.slowLimitPower": 4.0, 
+        "cpu.fastLimitPower": 6.0, 
         "cpu.fastLimitRecoverScale": 0.1, 
-        "cpu.margin": 0.4, 
+        "cpu.margin": 0.5, 
         "sched.scene": "boost"
       }
     }, 

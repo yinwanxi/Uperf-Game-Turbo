@@ -557,20 +557,20 @@
         "cpu.slowLimitPower": 999.0,
         "cpu.fastLimitPower": 999.0,
         "cpu.fastLimitCapacity": 999.0,
-        "cpu.margin": 0.23,
+        "cpu.margin": 0.24,
         "cpu.burst": 0.24
       },
       "idle": {
         "sched.scene": "touch"
       },
       "touch": {
-        "cpu.burst": 0.5,
+        "cpu.burst": 0.52,
         "cpu.predictThd": 0.35,
         "cpu.latencyTime": 0.0,
         "sched.scene": "touch"
       },
       "trigger": {
-        "cpu.margin": 0.58,
+        "cpu.margin": 0.6,
         "cpu.predictThd": 0.35,
         "cpu.latencyTime": 0.0,
         "sched.scene": "touch"
@@ -580,11 +580,11 @@
         "sched.scene": "touch"
       },
       "junk": {
-        "cpu.burst": 0.6, 
+        "cpu.burst": 0.62, 
         "sched.scene": "touch"
       },
       "switch": {
-        "cpu.burst": 0.3,
+        "cpu.burst": 0.4,
         "sched.scene": "boost"
       }
     },

@@ -140,10 +140,22 @@ fix_module_prop() {
     cp -f "$MODULE_PATH/module.prop" /data/adb/modules/uperf/module.prop
 }
 
+unlock_limit(){
+if [[ ! -d $MODPATH/system/vendor/etc/perf/ ]];then
+  dir=$MODPATH/system/vendor/etc/perf/
+  mkdir -p $dir
+fi
+
+for i in ` ls /system/vendor/etc/perf/ `
+do
+  touch $dir/$i 
+done
+}
+
 echo ""
 echo "* 原模块地址 Uperf https://github.com/yc9559/uperf/"
 echo "* Author: Matt Yang ❤️吟惋兮❤️改"
-echo "* Version: Game Turbo1.17 based on uperf904"
+echo "* Version: Game Turbo1.18 based on uperf904"
 echo "* 请不要破坏Uperf运行环境"
 echo "* 模块会附带安装asopt和yc子模块sfanalysis"
 echo "* "
@@ -160,6 +172,7 @@ echo "* "
 echo "* ❤️吟惋兮❤️"
 echo "- 正在为您安装Uperf Game Turbo❤️"
 install_uperf
+unlock_limit
 echo "* Uperf Game Turbo安装成功❤️"
 install_corp
 echo "* asopt安装成功❤️"

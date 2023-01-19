@@ -113,6 +113,7 @@ get_config_name() {
     "sdm845") echo "sdm845" ;;
     "lito") echo "$(_get_sdm76x_type)" ;;
     "sm6150") echo "$(_get_sm6150_type)" ;;
+    "holi") echo "sdm695" ;;
     "sdm710") echo "sdm710" ;;
     "msm8939") echo "sdm616" ;;
     "msm8916") echo "sdm616" ;;
@@ -145,6 +146,8 @@ get_config_name() {
     "universal7420") echo "e7420" ;;
     "mt6765") echo "mtp35" ;; # Helio P35(mt6765)/G35(mt6765g)/G37(mt6765h)
     "mt6768") echo "mtg80" ;; # Helio P65(mt6768)/G70(mt6769v)/G80(mt6769t)/G85(mt6769z)
+    "mt6779") echo "mtp90" ;;
+    "mt6789") echo "mtg99" ;;
     "mt6785") echo "mtg90t" ;;
     "mt6833") echo "mtd720" ;;
     "mt6833p") echo "mtd720" ;; # Dimensity 810
@@ -175,6 +178,8 @@ get_config_name() {
     "ALP") echo "kirin970" ;;
     "COR") echo "kirin970" ;;
     "kirin970") echo "kirin970" ;;
+    "sp9863a") echo "sp9863" ;;
+    "sp9863a_1h10") echo "sp9863" ;;
     *) echo "unsupported" ;;
     esac
 }

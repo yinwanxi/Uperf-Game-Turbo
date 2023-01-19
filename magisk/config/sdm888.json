@@ -445,7 +445,7 @@
       "fastLimitRecoverScale": 0.3,
       "predictThd": 0.3,
       "margin": 0.2,
-      "burst": 0.0,
+      "burst": 0.05,
       "guideCap": true,
       "limitEfficiency": false
     },
@@ -564,13 +564,13 @@
         "sched.scene": "touch"
       },
       "touch": {
-        "cpu.burst": 0.53,
+        "cpu.burst": 0.55,
         "cpu.predictThd": 0.35,
         "cpu.latencyTime": 0.0,
         "sched.scene": "touch"
       },
       "trigger": {
-        "cpu.margin": 0.6,
+        "cpu.margin": 0.63,
         "cpu.predictThd": 0.35,
         "cpu.latencyTime": 0.0,
         "sched.scene": "touch"
