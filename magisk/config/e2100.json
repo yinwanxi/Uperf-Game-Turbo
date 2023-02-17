@@ -1,7 +1,7 @@
 {
   "meta": {
-    "name": "sdm855/sdm855+/sdm860[22.09.04]",
-    "author": "yc@coolapk   ❤吟惋兮️❤️"
+    "name": "e2100",
+    "author": "yc@coolapk   ❤️吟惋兮❤"
   },
   "modules": {
     "switcher": {
@@ -40,27 +40,27 @@
         {
           "efficiency": 115,
           "nr": 4,
-          "typicalPower": 0.35,
-          "typicalFreq": 1.8,
+          "typicalPower": 0.32,
+          "typicalFreq": 2.2,
           "sweetFreq": 1.4,
           "plainFreq": 1.2,
           "freeFreq": 0.7
         },
         {
-          "efficiency": 250,
+          "efficiency": 320,
           "nr": 3,
-          "typicalPower": 1.53,
-          "typicalFreq": 2.4,
-          "sweetFreq": 1.8,
-          "plainFreq": 1.0,
+          "typicalPower": 1.66,
+          "typicalFreq": 2.8,
+          "sweetFreq": 1.7,
+          "plainFreq": 1.2,
           "freeFreq": 0.7
         },
         {
-          "efficiency": 250,
+          "efficiency": 400,
           "nr": 1,
-          "typicalPower": 2.06,
-          "typicalFreq": 2.8,
-          "sweetFreq": 2.2,
+          "typicalPower": 3.18,
+          "typicalFreq": 2.9,
+          "sweetFreq": 1.9,
           "plainFreq": 1.4,
           "freeFreq": 0.8
         }
@@ -445,7 +445,7 @@
       "fastLimitRecoverScale": 0.3,
       "predictThd": 0.3,
       "margin": 0.2,
-      "burst": 0.0,
+      "burst": 0.05,
       "guideCap": true,
       "limitEfficiency": false
     },
@@ -557,19 +557,19 @@
         "cpu.slowLimitPower": 999.0,
         "cpu.fastLimitPower": 999.0,
         "cpu.fastLimitCapacity": 999.0,
-        "cpu.margin": 0.32,
-        "cpu.burst": 0.34
+        "cpu.margin": 0.28,
+        "cpu.burst": 0.28
       },
       "idle": {
         "sched.scene": "touch"
       },
       "touch": {
-        "cpu.burst": 0.58,
+        "cpu.burst": 0.55,
         "cpu.latencyTime": 0.0,
         "sched.scene": "touch"
       },
       "trigger": {
-        "cpu.margin": 0.65,
+        "cpu.margin": 0.63,
         "cpu.latencyTime": 0.0,
         "sched.scene": "touch"
       },

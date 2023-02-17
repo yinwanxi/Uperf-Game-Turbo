@@ -566,13 +566,11 @@
       "touch": {
         "cpu.burst": 0.53,
         "cpu.latencyTime": 0.0,
-        "cpu.predictThd": 0.35,
         "sched.scene": "touch"
       },
       "trigger": {
         "cpu.margin": 0.65,
         "cpu.latencyTime": 0.0,
-        "cpu.predictThd": 0.35,
         "sched.scene": "touch"
       },
       "gesture": {

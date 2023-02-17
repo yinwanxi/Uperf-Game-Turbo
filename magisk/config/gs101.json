@@ -1,7 +1,7 @@
 {
   "meta": {
-    "name": "Dimensity 1000(mt6889)/1000+(mt6889z)/1000L(mt6885)[22.09.04]", 
-    "author": "yc@coolapk  ❤️吟惋兮❤改️"
+    "name": "Google Tensor[22.09.04]", 
+    "author": "yc@coolapk ❤️吟惋兮❤️"
   }, 
   "modules": {
     "switcher": {
@@ -38,22 +38,31 @@
       "enable": true, 
       "powerModel": [
         {
-          "efficiency": 100, 
+          "efficiency": 115, 
           "nr": 4, 
-          "typicalPower": 0.36, 
-          "typicalFreq": 2.0, 
+          "typicalPower": 0.62, 
+          "typicalFreq": 1.8, 
           "sweetFreq": 1.4, 
           "plainFreq": 1.2, 
           "freeFreq": 0.7
         }, 
         {
-          "efficiency": 300, 
-          "nr": 4, 
-          "typicalPower": 1.65, 
-          "typicalFreq": 2.6, 
+          "efficiency": 250, 
+          "nr": 2, 
+          "typicalPower": 1.19, 
+          "typicalFreq": 2.2, 
           "sweetFreq": 1.7, 
           "plainFreq": 1.0, 
           "freeFreq": 0.7
+        }, 
+        {
+          "efficiency": 400, 
+          "nr": 2, 
+          "typicalPower": 3.15, 
+          "typicalFreq": 2.8, 
+          "sweetFreq": 1.9, 
+          "plainFreq": 1.4, 
+          "freeFreq": 0.8
         }
       ]
     }, 
@@ -88,10 +97,10 @@
         ], 
         "c1": [
           4, 
-          5, 
-          6
+          5
         ], 
         "c2": [
+          6, 
           7
         ]
       }, 
@@ -441,7 +450,7 @@
       "cpusetFg": "0-2,4-7", 
       "cpusetBg": "0-2", 
       "cpusetSysBg": "0-2", 
-      "cpusetRe": "0-6"
+      "cpusetRe": "0-5"
     }, 
     "sched": {
       "scene": "idle"
@@ -477,7 +486,7 @@
         "sched.scene": "touch"
       }, 
       "junk": {
-        "cpu.burst": 0.6, 
+        "cpu.burst": 0.7, 
         "sched.scene": "touch"
       }, 
       "switch": {
@@ -491,10 +500,10 @@
     }, 
     "powersave": {
       "*": {
-        "cpu.latencyTime": 0.8, 
+        "cpu.latencyTime": 0.4, 
         "cpu.slowLimitPower": 1.0, 
         "cpu.fastLimitPower": 1.0, 
-        "cpu.fastLimitCapacity": 1.0, 
+        "cpu.fastLimitCapacity": 2.0, 
         "cpu.margin": 0.05
       }, 
       "idle": {
@@ -510,7 +519,7 @@
       }, 
       "trigger": {
         "cpu.latencyTime": 0.0, 
-        "cpu.margin": 0.2, 
+        "cpu.margin": 0.1, 
         "sched.scene": "touch"
       }, 
       "gesture": {
@@ -518,13 +527,13 @@
         "sched.scene": "touch"
       }, 
       "junk": {
-        "cpu.burst": 0.1, 
+        "cpu.burst": 0.2, 
         "sched.scene": "touch"
       }, 
       "switch": {
         "cpu.latencyTime": 0.0, 
         "cpu.slowLimitPower": 1.5, 
-        "cpu.fastLimitPower": 2.5, 
+        "cpu.fastLimitPower": 1.5, 
         "cpu.fastLimitRecoverScale": 0.1, 
         "cpu.margin": 0.2, 
         "sched.scene": "boost"
@@ -536,18 +545,20 @@
         "cpu.slowLimitPower": 999.0, 
         "cpu.fastLimitPower": 999.0, 
         "cpu.fastLimitCapacity": 999.0, 
-        "cpu.margin": 0.32,
-        "cpu.burst": 0.34
+        "cpu.margin": 0.3,
+        "cpu.burst": 0.2
       }, 
       "idle": {
+        "cpu.baseSampleTime": 0.01, 
+        "cpu.baseSlackTime": 0.04, 
         "sched.scene": "idle"
       }, 
       "touch": {
-        "cpu.margin": 0.5,
+        "cpu.margin": 0.45, 
         "sched.scene": "touch"
       }, 
       "trigger": {
-        "cpu.margin": 0.65,
+        "cpu.margin": 0.5, 
         "sched.scene": "touch"
       }, 
       "gesture": {
@@ -555,11 +566,11 @@
         "sched.scene": "touch"
       }, 
       "junk": {
-        "cpu.burst": 0.7, 
+        "cpu.burst": 0.8, 
         "sched.scene": "touch"
       }, 
       "switch": {
-        "cpu.burst": 0.3, 
+        "cpu.burst": 0.5, 
         "sched.scene": "boost"
       }
     }, 
@@ -569,7 +580,7 @@
         "cpu.slowLimitPower": 999.0, 
         "cpu.fastLimitPower": 999.0, 
         "cpu.fastLimitCapacity": 999.0, 
-        "cpu.burst": 1.0
+        "cpu.margin": 1.0
       }, 
       "idle": {
         "sched.scene": "idle"

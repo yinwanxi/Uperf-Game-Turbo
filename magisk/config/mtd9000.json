@@ -553,13 +553,11 @@
       }, 
       "touch": {
         "cpu.margin": 0.53,
-        "cpu.predictThd": 0.35,
         "cpu.latencyTime": 0.0,
         "sched.scene": "touch"
       }, 
       "trigger": {
         "cpu.margin": 0.6, 
-        "cpu.predictThd": 0.35,
         "cpu.latencyTime": 0.0,
         "sched.scene": "touch"
       }, 

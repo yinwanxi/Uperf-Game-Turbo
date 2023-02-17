@@ -10,6 +10,13 @@ com.miHoYo.bh3.bilibili performance
 com.miHoYo.enterprise.NGHSoD performance
 com.miHoYo.ys.bilibili performance
 com.tencent.lolm performance
+com.netease.wotb performance
+com.tencent.tmgp.speedmobile performance
+com.tencent.KiHan performance
+fi.twomenandadog.zombiecatchers performance
+com.garena.game.kgtw performance
+com.tencent.ig performance
+com.supercell.brawlstars performance
 com.ioncannon.cpuburn.gpugflops fast
 com.primatelabs.geekbench5 fast
 - powersave

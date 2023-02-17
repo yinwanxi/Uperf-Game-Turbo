@@ -545,12 +545,10 @@
       }, 
       "touch": {
         "cpu.margin": 0.5,
-        "cpu.predictThd": 0.15,
         "sched.scene": "touch"
       }, 
       "trigger": {
         "cpu.margin": 0.55, 
-        "cpu.predictThd": 0.15,
         "sched.scene": "touch"
       }, 
       "gesture": {
