@@ -121,11 +121,13 @@ get_config_name() {
     "msm8937") echo "sdm439" ;;
     "msm8953") echo "sdm625" ;;    # 625
     "msm8953pro") echo "sdm625" ;; # 626
+    "msm8952Pro") echo "sdm653" ;; #653
+    "msm8952") echo "sdm653" ;; #652
+    "msm8976SG") echo "sdm653" ;; #653
     "sdm660") echo "sdm660" ;;
     "sdm636") echo "sdm660" ;;
     "trinket") echo "sdm665" ;; # sdm665
-    "bengal") echo "sdm665" ;;  # sdm662
-    "msm8976") echo "sdm652" ;;
+    "bengal") echo "sdm680" ;;  # sdm662
     "msm8956") echo "sdm650" ;;
     "msm8998") echo "sdm835" ;;
     "msm8996") echo "sdm820" ;;
@@ -134,6 +136,7 @@ get_config_name() {
     "exynos2100") echo "e2100" ;;
     "exynos1080") echo "e1080" ;;
     "exynos990") echo "e990" ;;
+    "exynos2100") echo "e2100" ;;
     "universal9925") echo "e2200" ;;
     "universal2100") echo "e2100" ;;
     "universal1080") echo "e1080" ;;
@@ -149,6 +152,7 @@ get_config_name() {
     "mt6779") echo "mtp90" ;;
     "mt6789") echo "mtg99" ;;
     "mt6785") echo "mtg90t" ;;
+    "mt6797") echo "mtx20" ;;
     "mt6833") echo "mtd720" ;;
     "mt6833p") echo "mtd720" ;; # Dimensity 810
     "mt6833v") echo "mtd720" ;; # Dimensity 810
@@ -178,6 +182,10 @@ get_config_name() {
     "ALP") echo "kirin970" ;;
     "COR") echo "kirin970" ;;
     "kirin970") echo "kirin970" ;;
+    "hi3650") echo "kirin955" ;;
+    "FRD") echo "kirin955" ;;
+    "EVA-TL00") echo "kirin955" ;;
+    "kirin955") echo "kirin955" ;;
     "sp9863a") echo "sp9863" ;;
     "sp9863a_1h10") echo "sp9863" ;;
     *) echo "unsupported" ;;
