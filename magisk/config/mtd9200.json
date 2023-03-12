@@ -1,6 +1,6 @@
 {
   "meta": {
-    "name": "Dimensity 8000/8100/8200(mt6895)[22.09.04]",
+    "name": "Dimensity 9200(mt6985)[22.09.04]",
     "author": "yc@coolapk  ❤吟惋兮️❤️改"
   },
   "modules": {
@@ -38,31 +38,31 @@
       "enable": true,
       "powerModel": [
         {
-          "efficiency": 115,
+          "efficiency": 140,
           "nr": 4,
-          "typicalPower": 0.36,
-          "typicalFreq": 2,
-          "sweetFreq": 1.4,
-          "plainFreq": 1.2,
-          "freeFreq": 0.7
+          "typicalPower": 0.55,
+          "typicalFreq": 1.8,
+          "sweetFreq": 1.3,
+          "plainFreq": 0.7,
+          "freeFreq": 0.5
         },
         {
-          "efficiency": 320,
+          "efficiency": 340,
           "nr": 3,
-          "typicalPower": 1.66,
-          "typicalFreq": 2.8,
-          "sweetFreq": 1.9,
-          "plainFreq": 1,
+          "typicalPower": 1.8,
+          "typicalFreq": 2.85,
+          "sweetFreq": 1.95,
+          "plainFreq": 1.3,
           "freeFreq": 0.7
         },
         {
-          "efficiency": 320,
+          "efficiency": 500,
           "nr": 1,
-          "typicalPower": 1.66,
-          "typicalFreq": 2.8,
+          "typicalPower": 3.0,
+          "typicalFreq": 3.05,
           "sweetFreq": 2.2,
           "plainFreq": 1.6,
-          "freeFreq": 0.8
+          "freeFreq": 1.2
         }
       ]
     },
@@ -72,8 +72,8 @@
         "cpusetTa": "/dev/cpuset/top-app/cpus",
         "cpusetFg": "/dev/cpuset/foreground/cpus",
         "cpusetBg": "/dev/cpuset/background/cpus",
-        "cpusetRe": "/dev/cpuset/restricted/cpus",
         "cpusetSysBg": "/dev/cpuset/system-background/cpus",
+        "cpusetRe": "/dev/cpuset/restricted/cpus",
         "ddrMin": "/sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq"
       }
     },
@@ -441,16 +441,16 @@
       "fastLimitCapacity": 10,
       "fastLimitRecoverScale": 0.3,
       "predictThd": 0.3,
-      "margin": 0.2,
+      "margin": 0.18,
       "burst": 0,
       "guideCap": true,
       "limitEfficiency": false
     },
     "sysfs": {
       "cpusetTa": "0-7",
-      "cpusetFg": "0-2,4-7",
-      "cpusetBg": "0-2",
-      "cpusetSysBg": "0-2",
+      "cpusetFg": "0-6",
+      "cpusetBg": "0-3",
+      "cpusetSysBg": "0-3",
       "cpusetRe": "0-6",
       "ddrMin": "800000000"
     },
@@ -464,9 +464,9 @@
         "cpu.latencyTime": 0.2,
         "cpu.slowLimitPower": 2,
         "cpu.fastLimitPower": 2,
-        "cpu.fastLimitCapacity": 2,
+        "cpu.fastLimitCapacity": 14,
         "cpu.fastLimitRecoverScale": 15,
-        "cpu.margin": 0.12,
+        "cpu.margin": 0.2,
         "sysfs.ddrMin": "3200000000"
       },
       "idle": {
@@ -477,11 +477,11 @@
         "sched.scene": "touch"
       },
       "trigger": {
-        "cpu.margin": 0.4,
+        "cpu.margin": 0.3,
         "sched.scene": "touch"
       },
       "gesture": {
-        "cpu.margin": 0.6,
+        "cpu.margin": 0.4,
         "sched.scene": "touch"
       },
       "junk": {
@@ -497,7 +497,7 @@
         "cpu.margin": 0.4,
         "cpu.limitEfficiency": true,
         "sched.scene": "boost",
-        "sysfs.ddrMin": "5500000000"
+        "sysfs.ddrMin": "3200000000"
       }
     },
     "powersave": {
@@ -517,7 +517,7 @@
         "sched.scene": "idle"
       },
       "touch": {
-        "cpu.baseSampleTime": 0.04,
+        "cpu.burst": 0.2,
         "sched.scene": "touch"
       },
       "trigger": {
@@ -549,8 +549,8 @@
         "cpu.fastLimitPower": 999,
         "cpu.fastLimitCapacity": 999,
         "cpu.fastLimitRecoverScale": 999,
-        "cpu.margin": 0.28,
-        "cpu.burst": 0.29,
+        "cpu.margin": 0.25,
+        "cpu.burst": 0.25,
         "sysfs.ddrMin": "5500000000"
       },
       "idle": {
@@ -559,11 +559,11 @@
         "sched.scene": "idle"
       },
       "touch": {
-      "cpu.margin": 0.53,
+        "cpu.margin": 0.55,
         "sched.scene": "touch"
       },
       "trigger": {
-        "cpu.margin": 0.63,
+        "cpu.margin": 0.6,
         "sched.scene": "touch"
       },
       "gesture": {
@@ -571,7 +571,7 @@
         "sched.scene": "touch"
       },
       "junk": {
-        "cpu.burst": 0.7,
+        "cpu.burst": 0.68,
         "sched.scene": "touch"
       },
       "switch": {

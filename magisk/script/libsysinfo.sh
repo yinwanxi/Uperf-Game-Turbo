@@ -136,7 +136,6 @@ get_config_name() {
     "exynos2100") echo "e2100" ;;
     "exynos1080") echo "e1080" ;;
     "exynos990") echo "e990" ;;
-    "exynos2100") echo "e2100" ;;
     "universal9925") echo "e2200" ;;
     "universal2100") echo "e2100" ;;
     "universal1080") echo "e1080" ;;
@@ -149,6 +148,7 @@ get_config_name() {
     "universal7420") echo "e7420" ;;
     "mt6765") echo "mtp35" ;; # Helio P35(mt6765)/G35(mt6765g)/G37(mt6765h)
     "mt6768") echo "mtg80" ;; # Helio P65(mt6768)/G70(mt6769v)/G80(mt6769t)/G85(mt6769z)
+    "mt6771") echo "mtp70" ;;
     "mt6779") echo "mtp90" ;;
     "mt6789") echo "mtg99" ;;
     "mt6785") echo "mtg90t" ;;
@@ -166,6 +166,7 @@ get_config_name() {
     "mt6893") echo "mtd1200" ;;
     "mt6895") echo "mtd8100" ;;
     "mt6983") echo "mtd9000" ;;
+    "mt6985") echo "mtd9200" ;;
     "gs101") echo "gs101" ;;
     "PRL") echo "kirin65x" ;;
     "BLN") echo "kirin65x" ;;

@@ -34,4 +34,5 @@ echo "sh $SCRIPT_PATH/powercfg_main.sh \"\$1\"" >>/data/powercfg.sh
 wait_until_login
 
 sh $SCRIPT_PATH/powercfg_once.sh
+sh $SCRIPT_PATH/platform_special.sh
 uperf_start
