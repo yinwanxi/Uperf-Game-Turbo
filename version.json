@@ -1,6 +1,6 @@
 {
-  "versionCode": 230220,
-  "version": "1.20 based on uperf 904",
-  "zipUrl": "https://github.com/yinwanxi/Uperf-Game-Turbo/releases/download/Uperf-Game-Turbo1.20/UperfGameTurbo.1.20.zip",
+  "versionCode": 230324,
+  "version": "1.21 based on uperf 904",
+  "zipUrl": "https://github.com/yinwanxi/Uperf-Game-Turbo/releases/tag/Uperf-Game-Turbo1.21/UperfGameTurbo.1.21.zip",
   "changelog": "https://raw.githubusercontent.com/yinwanxi/Uperf-Game-Turbo/master/changelog.md"
 }
