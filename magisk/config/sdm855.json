@@ -512,7 +512,7 @@
         "cpu.slowLimitPower": 1.0, 
         "cpu.fastLimitPower": 1.0, 
         "cpu.fastLimitCapacity": 1.0, 
-        "cpu.margin": 0.05
+        "cpu.margin": 0.08
       }, 
       "idle": {
         "cpu.baseSampleTime": 0.04, 
@@ -527,11 +527,11 @@
       }, 
       "trigger": {
         "cpu.latencyTime": 0.0, 
-        "cpu.margin": 0.2, 
+        "cpu.margin": 0.15, 
         "sched.scene": "touch"
       }, 
       "gesture": {
-        "cpu.margin": 0.2, 
+        "cpu.margin": 0.15, 
         "sched.scene": "touch"
       }, 
       "junk": {
@@ -543,7 +543,7 @@
         "cpu.slowLimitPower": 1.5, 
         "cpu.fastLimitPower": 2.5, 
         "cpu.fastLimitRecoverScale": 0.1, 
-        "cpu.margin": 0.2, 
+        "cpu.margin": 0.1, 
         "sched.scene": "boost"
       }
     },

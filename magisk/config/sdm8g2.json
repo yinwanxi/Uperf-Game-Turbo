@@ -441,15 +441,15 @@
       "fastLimitCapacity": 12.0, 
       "fastLimitRecoverScale": 0.3, 
       "predictThd": 0.3, 
-      "margin": 0.1, 
-      "burst": 0.15, 
+      "margin": 0.15, 
+      "burst": 0, 
       "guideCap": true, 
       "limitEfficiency": false
     }, 
     "sysfs": {
       "cpuFreqMin0":"0",
       "cpusetTa": "0-7", 
-      "cpusetFg": "0-2,5-7", 
+      "cpusetFg": "0-2,6-7", 
       "cpusetBg": "0-2", 
       "cpusetSysBg": "0-2", 
       "cpusetRe": "0-6"
@@ -466,7 +466,7 @@
         "cpu.slowLimitPower": 2.0, 
         "cpu.fastLimitPower": 2.0, 
         "cpu.fastLimitCapacity": 16.0, 
-        "cpu.margin": 0.25
+        "cpu.margin": 0.2
       }, 
       "idle": {
         "cpu.baseSampleTime": 0.04, 
@@ -522,23 +522,23 @@
       }, 
       "trigger": {
         "cpu.latencyTime": 0.0, 
-        "cpu.margin": 0.2, 
+        "cpu.margin": 0.1, 
         "sched.scene": "touch"
       }, 
       "gesture": {
-        "cpu.margin": 0.2, 
+        "cpu.margin": 0.1, 
         "sched.scene": "touch"
       }, 
       "junk": {
-        "cpu.burst": 0.1, 
+        "cpu.burst": 0.08, 
         "sched.scene": "touch"
       }, 
       "switch": {
         "cpu.latencyTime": 0.0, 
-        "cpu.slowLimitPower": 1.5, 
-        "cpu.fastLimitPower": 2.5, 
+        "cpu.slowLimitPower": 1.0, 
+        "cpu.fastLimitPower": 2.0, 
         "cpu.fastLimitRecoverScale": 0.1, 
-        "cpu.margin": 0.2, 
+        "cpu.margin": 0.1, 
         "sched.scene": "boost"
       }
     }, 
@@ -569,7 +569,7 @@
         "sched.scene": "touch"
       }, 
       "junk": {
-        "cpu.burst": 0.58, 
+        "cpu.burst": 0.55, 
         "cpu.latencyTime": 0.0,
         "sched.scene": "touch"
       }, 
