@@ -433,7 +433,7 @@
       "fastLimitCapacity": 10,
       "fastLimitRecoverScale": 0.3,
       "predictThd": 0.3,
-      "margin": 0.2,
+      "margin": 0.25,
       "burst": 0,
       "guideCap": true,
       "limitEfficiency": false
@@ -459,7 +459,7 @@
         "cpu.fastLimitPower": 2,
         "cpu.fastLimitCapacity": 16,
         "cpu.fastLimitRecoverScale": 0.4,
-        "cpu.margin": 0.2,
+        "cpu.margin": 0.3,
         "sysfs.ddrboost": "1",
         "sysfs.cciboost": "1"
       },

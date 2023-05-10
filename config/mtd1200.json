@@ -442,7 +442,7 @@
       "fastLimitCapacity": 10,
       "fastLimitRecoverScale": 0.3,
       "predictThd": 0.3,
-      "margin": 0.18,
+      "margin": 0.2,
       "burst": 0,
       "guideCap": true,
       "limitEfficiency": false

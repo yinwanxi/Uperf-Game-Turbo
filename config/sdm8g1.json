@@ -444,7 +444,7 @@
       "fastLimitCapacity": 10.0,
       "fastLimitRecoverScale": 0.3,
       "predictThd": 0.3,
-      "margin": 0.15,
+      "margin": 0.18,
       "burst": 0,
       "guideCap": true,
       "limitEfficiency": false
@@ -471,7 +471,7 @@
         "cpu.slowLimitPower": 2.0,
         "cpu.fastLimitPower": 2.0,
         "cpu.fastLimitCapacity": 16.0,
-        "cpu.margin": 0.15
+        "cpu.margin": 0.18
       },
       "idle": {
         "cpu.baseSampleTime": 0.04,
