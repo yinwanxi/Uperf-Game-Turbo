@@ -477,15 +477,15 @@
         "sched.scene": "touch"
       },
       "trigger": {
-        "cpu.margin": 0.4,
+        "cpu.margin": 0.2,
         "sched.scene": "touch"
       },
       "gesture": {
-        "cpu.margin": 0.6,
+        "cpu.margin": 0.3,
         "sched.scene": "touch"
       },
       "junk": {
-        "cpu.burst": 0.6,
+        "cpu.burst": 0.3,
         "sched.scene": "touch",
         "cpu.limitEfficiency": true,
         "sysfs.ddrMin": "5500000000"
@@ -506,7 +506,7 @@
         "cpu.slowLimitPower": 1,
         "cpu.fastLimitPower": 1,
         "cpu.fastLimitCapacity": 1,
-        "cpu.margin": 0.05,
+        "cpu.margin": 0.1,
         "sysfs.ddrMin": "2667000000"
       },
       "idle": {

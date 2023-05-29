@@ -504,7 +504,7 @@
         "cpu.slowLimitPower": 1.0, 
         "cpu.fastLimitPower": 1.0, 
         "cpu.fastLimitCapacity": 1.0, 
-        "cpu.margin": 0.05
+        "cpu.margin": 0.1
       }, 
       "idle": {
         "cpu.baseSampleTime": 0.04, 
@@ -546,7 +546,7 @@
         "cpu.fastLimitPower": 999.0, 
         "cpu.fastLimitCapacity": 999.0, 
         "cpu.margin": 0.24,
-        "cpu.burst": 0.25
+        "cpu.burst": 0.2
       }, 
       "idle": {
         "sched.scene": "idle"

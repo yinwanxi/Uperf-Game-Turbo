@@ -81,6 +81,7 @@
         "cpuMax":"/sys/devices/platform/exynos-ufcc/ufc/cpufreq_max_limit",
         "cpuMin":"/sys/devices/platform/exynos-ufcc/ufc/cpufreq_min_limit",
         "gpuMin":"/sys/kernel/gpu/gpu_min_clock",
+        "gpuMax":"/sys/kernel/gpu/gpu_max_clock",
         "powerLimit":"/sys/devices/platform/xperf/prof/power_limit",
         "sca7Min":"/sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq",
         "sca7Max":"/sys/devices/system/cpu/cpufreq/policy7/scaling_max_freq",
@@ -463,13 +464,14 @@
       "llccddrRC0": "400",
       "llccddrRC4": "400",
       "powerLimit": "10000",
-      "gpuMin": "130000",
-      "cpuMax": "2392000",
-      "cpuMin": "1144000",
-      "sca7Min": "832000",
-      "sca7Max": "2080000",
-      "sca4Max": "2288000",
-      "sca4Min": "728000",
+      "gpuMin": "0",
+      "gpuMax": "221000",
+      "cpuMax": "1664000",
+      "cpuMin": "936000",
+      "sca7Min": "936000",
+      "sca7Max": "1664000",
+      "sca4Max": "1664000",
+      "sca4Min": "936000",
       "cpusetTa": "0-7",
       "cpusetFg": "0-2,4-7",
       "cpusetBg": "0-2",
@@ -484,17 +486,19 @@
     "balance": {
       "*": {
         "sysfs.cpuMax": "2912000",
-        "sysfs.cpuMin": "1560000",
+        "sysfs.cpuMin": "1144000",
         "sysfs.sca4Max": "2210000",
         "sysfs.sca4Min": "1144000",
         "sysfs.sca7Max": "2080000",
-        "sysfs.sca7Min": "1040000",
+        "sysfs.sca7Min": "1144000",
+        "sysfs.gpuMin": "0",
+        "sysfs.gpuMax": "858000",
         "sysfs.powerLimit": "8000",
         "cpu.latencyTime": 0.2,
         "cpu.slowLimitPower": 40.0,
         "cpu.fastLimitPower": 40.0,
         "cpu.fastLimitCapacity": 160.0,
-        "cpu.margin": 0.3
+        "cpu.margin": 0.2
       },
       "idle": {
         "cpu.baseSampleTime": 0.04,
@@ -509,22 +513,22 @@
       },
       "trigger": {
         "cpu.latencyTime": 0.0,
-        "cpu.margin": 0.45,
+        "cpu.margin": 0.2,
         "sched.scene": "touch"
       },
       "gesture": {
-        "cpu.margin": 0.6,
+        "cpu.margin": 0.2,
         "sched.scene": "touch"
       },
       "junk": {
-        "cpu.burst": 0.5,
+        "cpu.burst": 0.3,
         "sched.scene": "touch"
       },
       "switch": {
         "cpu.latencyTime": 0.0,
-        "cpu.slowLimitPower": 50.0,
-        "cpu.fastLimitPower": 50.0,
-        "cpu.fastLimitRecoverScale": 0.1,
+        "cpu.slowLimitPower": 5.0,
+        "cpu.fastLimitPower": 5.0,
+        "cpu.fastLimitRecoverScale": 10,
         "cpu.margin": 0.4,
         "sched.scene": "boost"
       }
@@ -536,7 +540,7 @@
         "cpu.fastLimitPower": 1.0, 
         "cpu.fastLimitCapacity": 1.0, 
         "sysfs.powerLimit": "6000",
-        "cpu.margin": 0.05
+        "cpu.margin": 0.1
       }, 
       "idle": {
         "cpu.baseSampleTime": 0.04, 
@@ -551,11 +555,11 @@
       }, 
       "trigger": {
         "cpu.latencyTime": 0.0, 
-        "cpu.margin": 0.2, 
+        "cpu.margin": 0.1, 
         "sched.scene": "touch"
       }, 
       "gesture": {
-        "cpu.margin": 0.2, 
+        "cpu.margin": 0.1, 
         "sched.scene": "touch"
       }, 
       "junk": {
