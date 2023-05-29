@@ -490,7 +490,7 @@
         "sched.scene": "touch"
       },
       "gesture": {
-        "cpu.margin": 0.6,
+        "cpu.margin": 0.4,
         "sched.scene": "touch"
       },
       "junk": {
@@ -512,7 +512,7 @@
         "cpu.slowLimitPower": 1.0, 
         "cpu.fastLimitPower": 1.0, 
         "cpu.fastLimitCapacity": 1.0, 
-        "cpu.margin": 0.05
+        "cpu.margin": 0.1
       }, 
       "idle": {
         "cpu.baseSampleTime": 0.04, 

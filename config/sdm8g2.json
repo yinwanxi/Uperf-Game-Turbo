@@ -74,6 +74,9 @@
         "cpusetFg": "/dev/cpuset/foreground/cpus", 
         "cpusetBg": "/dev/cpuset/background/cpus", 
         "cpusetSysBg": "/dev/cpuset/system-background/cpus", 
+        "LLCCmax": "/sys/devices/system/cpu/bus_dcvs/LLCC/hw_max_freq",
+        "L3max": "/sys/devices/system/cpu/bus_dcvs/L3/hw_max_freq",
+        "DDRmax": "/sys/devices/system/cpu/bus_dcvs/DDR/hw_max_freq",
         "cpusetRe": "/dev/cpuset/restricted/cpus"
       }
     }, 
@@ -447,7 +450,10 @@
       "limitEfficiency": false
     }, 
     "sysfs": {
-      "cpuFreqMin0":"0",
+      "LLCCmax":"1066000",
+      "L3max":"1804800",
+      "DDRmax":"4224000",
+      "cpuFreqMin0":"307200",
       "cpusetTa": "0-7", 
       "cpusetFg": "0-2,6-7", 
       "cpusetBg": "0-2", 
@@ -461,7 +467,7 @@
   "presets": {
     "balance": {
       "*": {
-        "sysfs.cpuFreqMin0":"2016000", 
+        "sysfs.cpuFreqMin0":"1670400", 
         "cpu.latencyTime": 0.2, 
         "cpu.slowLimitPower": 2.0, 
         "cpu.fastLimitPower": 2.0, 
@@ -507,7 +513,7 @@
         "cpu.slowLimitPower": 1.0, 
         "cpu.fastLimitPower": 1.0, 
         "cpu.fastLimitCapacity": 1.0, 
-        "cpu.margin": 0.05
+        "cpu.margin": 0.1
       }, 
       "idle": {
         "cpu.baseSampleTime": 0.04, 
@@ -544,6 +550,10 @@
     }, 
     "performance": {
       "*": {
+        "sysfs.cpuFreqMin0":"1900800",
+        "sysfs.LLCCmax": 999999999,
+        "sysfs.L3max": 999999999,
+        "sysfs.DDRmax": 999999999,
         "cpu.latencyTime": 0.0, 
         "cpu.slowLimitPower": 999.0, 
         "cpu.fastLimitPower": 999.0, 
@@ -580,6 +590,10 @@
     }, 
     "fast": {
       "*": {
+        "sysfs.cpuFreqMin0":"1900800",
+        "sysfs.LLCCmax": 999999999,
+        "sysfs.L3max": 999999999,
+        "sysfs.DDRmax": 999999999,
         "cpu.latencyTime": 0.0, 
         "cpu.slowLimitPower": 999.0, 
         "cpu.fastLimitPower": 999.0, 

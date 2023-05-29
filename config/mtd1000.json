@@ -540,9 +540,9 @@
     "performance": {
       "*": {
         "cpu.latencyTime": 0.0, 
-        "cpu.slowLimitPower": 999.0, 
-        "cpu.fastLimitPower": 999.0, 
-        "cpu.fastLimitCapacity": 999.0, 
+        "cpu.slowLimitPower": 10.0, 
+        "cpu.fastLimitPower": 20.0, 
+        "cpu.fastLimitCapacity": 360.0, 
         "cpu.margin": 0.32,
         "cpu.burst": 0.34
       }, 
