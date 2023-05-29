@@ -1,6 +1,6 @@
 # 更新日志
 
-## Uperf-Game-Turbo1.22
+## Uperf-Game-Turbo1.23
 
 - 优化省电和均衡模式功耗
 - 部分极端处理器性能模式修改
