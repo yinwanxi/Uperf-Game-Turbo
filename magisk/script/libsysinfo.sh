@@ -96,7 +96,11 @@ _get_taro_type() {
     if [ "$(get_maxfreq 4)" -gt 2700000 ]; then
         echo "sdm8g1+"
     else
-        echo "sdm8g1"
+       if [ "$(get_maxfreq 7)" -gt 2500000 ]; then
+           echo "sdm8g1"
+        else
+           echo "sdm7g1"
+        fi
     fi
 }
 
