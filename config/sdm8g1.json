@@ -74,12 +74,16 @@
                 "cpusetBg": "/dev/cpuset/background/cpus",
                 "cpusetSysBg": "/dev/cpuset/system-background/cpus",
                 "cpusetRe": "/dev/cpuset/restricted/cpus",
+                "CPUllccmin": "/sys/class/devfreq/kgsl-busmon/min_freq",
+                "CPUllccmax": "/sys/class/devfreq/kgsl-busmon/max_freq",
+                "CPUddrmin": "/sys/class/devfreq/3d00000.qcom,kgsl-3d0/min_freq",
+                "CPUddrmax": "/sys/class/devfreq/3d00000.qcom,kgsl-3d0/max_freq",
                 "scaling_max7": "/sys/devices/system/cpu/cpufreq/policy7/scaling_max_freq",
                 "scaling_max4": "/sys/devices/system/cpu/cpufreq/policy4/scaling_max_freq"
       }
     },
     "sched": {
-      "enable": true,
+      "enable": false,
       "cpumask": {
         "all": [
           0,
@@ -453,6 +457,10 @@
             "cpusetBg": "0-2",
             "cpusetSysBg": "0-3",
             "cpusetRe": "0-6",
+            "CPUddrmin": "220000000",
+            "CPUllccmin": "220000000",
+            "CPUllccmax": "818000000",
+            "CPUddrmax": "818000000",
             "scaling_max4": "2419200",
             "scaling_max7": "2841600"
         },
@@ -463,7 +471,12 @@
     "presets": {
         "balance": {
             "*": {
-                "sysfs.scaling_max7": "1843200",
+                "sysfs.CPUllccmin": "285000000",
+                "sysfs.CPUddrmin": "285000000",
+                "sysfs.CPUllccmax": "545000000",
+                "sysfs.CPUddrmax": "545000000",
+                "sysfs.scaling_max4": "1766400",
+                "sysfs.scaling_max7": "2035200",
                 "cpu.latencyTime": 0.2,
                 "cpu.predictThd": 0.2,
                 "cpu.slowLimitPower": 1,
@@ -498,7 +511,12 @@
         },
         "powersave": {
             "*": {
-                "sysfs.scaling_max7": "1286400",
+                "sysfs.CPUllccmin": "220000000",
+                "sysfs.CPUddrmin": "220000000",
+                "sysfs.CPUllccmax": "350000000",
+                "sysfs.CPUddrmax": "350000000",
+                "sysfs.scaling_max4": "1324800",
+                "sysfs.scaling_max7": "1555200",
                 "cpu.latencyTime": 0.3,
                 "cpu.predictThd": 0.3,
                 "cpu.slowLimitPower": 0.0,
@@ -533,8 +551,12 @@
         },
         "performance": {
             "*": {
+                "sysfs.CPUddrmin": "791000000",
+                "sysfs.CPUllccmin": "791000000",
+                "sysfs.CPUllccmax": "818000000",
+                "sysfs.CPUddrmax": "818000000",
                 "sysfs.scaling_max4": "2112000",
-                "sysfs.scaling_max7": "2400000",
+                "sysfs.scaling_max7": "2496000",
                 "cpu.latencyTime": 0.0,
                 "cpu.slowLimitPower": 10.0,
                 "cpu.fastLimitPower": 20.0,
@@ -568,6 +590,10 @@
         },
         "fast": {
             "*": {
+                "sysfs.CPUddrmin": "818000000",
+                "sysfs.CPUllccmin": "818000000",
+                "sysfs.CPUllccmax": "818000000",
+                "sysfs.CPUddrmax": "818000000",
                 "sysfs.scaling_max7": "2841600",
                 "sysfs.scaling_max4": "2419200",
                 "cpu.latencyTime": 0.1,
