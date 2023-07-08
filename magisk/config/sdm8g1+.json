@@ -121,10 +121,10 @@
         }, 
         "bg": {
           "bg": "", 
-          "fg": "c0", 
+          "fg": "c1", 
           "idle": "c0", 
-          "touch": "c0", 
-          "boost": "c0"
+          "touch": "c1", 
+          "boost": "c1"
         }, 
         "ui": {
           "bg": "", 
@@ -147,6 +147,13 @@
           "touch": "c1", 
           "boost": "all"
         }, 
+        "fuck": {
+          "bg": "c1", 
+          "fg": "", 
+          "idle": "", 
+          "touch": "", 
+          "boost": ""
+        },
         "gtmain": {
           "bg": "", 
           "fg": "all", 
@@ -198,6 +205,13 @@
           "touch": 97, 
           "boost": 98
         }, 
+        "fuck": {
+          "bg": 98, 
+          "fg": 98, 
+          "idle": 97, 
+          "touch": 97, 
+          "boost": 98
+        },
         "rtsys": {
           "bg": 97, 
           "fg": 97, 
@@ -234,6 +248,18 @@
             }
           ]
         }, 
+        {
+          "name": "国产毒瘤我日你仙人",
+          "regex": "^com.tencent.mobileqq|tv.danmaku.bili|com.tencent.mm|com.smile.gifmaker|com.tencent.qqmusic|com.netease.cloudmusic|com.ss.android.ugc.aweme.lite|com.kuaishou.nebula",
+          "pinned": false,
+          "rules": [
+            {
+              "k": ".",
+              "ac": "fuck",
+              "pc": "fuck"
+            }
+          ]
+        },
         {
           "name": "SurfaceFlinger", 
           "regex": "/system/bin/surfaceflinger", 

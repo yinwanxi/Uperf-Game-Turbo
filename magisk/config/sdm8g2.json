@@ -125,10 +125,10 @@
         }, 
         "bg": {
           "bg": "", 
-          "fg": "c0", 
-          "idle": "c0", 
-          "touch": "c0", 
-          "boost": "c0"
+          "fg": "c1", 
+          "idle": "c1", 
+          "touch": "c1", 
+          "boost": "c1"
         }, 
         "ui": {
           "bg": "", 
@@ -151,6 +151,13 @@
           "touch": "c1", 
           "boost": "all"
         }, 
+        "gtcoop": {
+          "bg": "c1", 
+          "fg": "", 
+          "idle": "", 
+          "touch": "", 
+          "boost": ""
+        },
         "gtmain": {
           "bg": "", 
           "fg": "all", 
@@ -202,12 +209,19 @@
           "touch": 97, 
           "boost": 98
         }, 
-        "rtsys": {
+        "rtusr": {
+          "bg": 98, 
+          "fg": 98, 
+          "idle": 97, 
+          "touch": 97, 
+          "boost": 98
+        },
+        "fuck": {
           "bg": 97, 
           "fg": 97, 
           "idle": 96, 
-          "touch": 96, 
-          "boost": 97
+          "touch": 98, 
+          "boost": 100
         }
       }, 
       "rules": [
@@ -352,6 +366,18 @@
             }
           ]
         }, 
+                {
+          "name": "国产毒瘤我日你仙人",
+          "regex": "^com.tencent.mobileqq|tv.danmaku.bili|com.tencent.mm|com.smile.gifmaker|com.tencent.qqmusic|com.netease.cloudmusic|com.ss.android.ugc.aweme.lite|com.kuaishou.nebula",
+          "pinned": false,
+          "rules": [
+            {
+              "k": ".",
+              "ac": "fuck",
+              "pc": "fuck"
+            }
+          ]
+        },
         {
           "name": "App co-process", 
           "regex": "[.].+:", 
@@ -467,7 +493,7 @@
   "presets": {
     "balance": {
       "*": {
-        "sysfs.cpuFreqMin0":"1670400", 
+        "sysfs.cpuFreqMin0":"1017600",
         "cpu.latencyTime": 0.2, 
         "cpu.slowLimitPower": 2.0, 
         "cpu.fastLimitPower": 2.0, 
@@ -495,7 +521,7 @@
         "sched.scene": "touch"
       }, 
       "junk": {
-        "cpu.burst": 0.8, 
+        "cpu.burst": 0.6, 
         "sched.scene": "touch"
       }, 
       "switch": {
@@ -550,7 +576,7 @@
     }, 
     "performance": {
       "*": {
-        "sysfs.cpuFreqMin0":"1900800",
+        "sysfs.cpuFreqMin0":"1228800",
         "sysfs.LLCCmax": 999999999,
         "sysfs.L3max": 999999999,
         "sysfs.DDRmax": 999999999,
@@ -590,7 +616,6 @@
     }, 
     "fast": {
       "*": {
-        "sysfs.cpuFreqMin0":"1900800",
         "sysfs.LLCCmax": 999999999,
         "sysfs.L3max": 999999999,
         "sysfs.DDRmax": 999999999,
