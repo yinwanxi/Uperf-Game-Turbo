@@ -4,3 +4,6 @@ ro.vendor.smart_dfps.enable=false
 ro.mtk_perf_simple_start_win=0
 ro.mtk_perf_response_time=0
 ro.mtk_perf_fast_start_win=0
+Build.BRAND=
+ro.vendor.afbc.enable=1
+persist.vendor.gnss.hpLocSetUI=true
