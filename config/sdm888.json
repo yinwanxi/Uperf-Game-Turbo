@@ -624,16 +624,15 @@
                 "sysfs.CPU7ddrmin": "12191",
                 "sysfs.CPUl3max": "1593600000",
                 "sysfs.CPUl3min": "1593600000",
-                "sysfs.CPU7max": "2035200",
-                "sysfs.CPU4max": "2112000",
+                "sysfs.CPU7max": "2841600",
+                "sysfs.CPU4max": "2419200",
                 "sysfs.UFSmax": "300000000",
                 "cpu.latencyTime": 0.1,
                 "cpu.slowLimitPower": 999,
                 "cpu.fastLimitPower": 999,
                 "cpu.fastLimitCapacity": 999,
                 "cpu.predictThd": 0.1,
-                "cpu.margin": 1,
-                "cpu.burst": 1
+                "cpu.margin": 1
             },
             "idle": {
                 "sched.scene": "idle"

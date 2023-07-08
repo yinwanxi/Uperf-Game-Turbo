@@ -493,6 +493,7 @@
   "presets": {
     "balance": {
       "*": {
+        "sysfs.cpuFreqMin0":"1017600",
         "cpu.latencyTime": 0.2, 
         "cpu.slowLimitPower": 2.0, 
         "cpu.fastLimitPower": 2.0, 
@@ -520,7 +521,7 @@
         "sched.scene": "touch"
       }, 
       "junk": {
-        "cpu.burst": 0.8, 
+        "cpu.burst": 0.6, 
         "sched.scene": "touch"
       }, 
       "switch": {
@@ -575,6 +576,7 @@
     }, 
     "performance": {
       "*": {
+        "sysfs.cpuFreqMin0":"1228800",
         "sysfs.LLCCmax": 999999999,
         "sysfs.L3max": 999999999,
         "sysfs.DDRmax": 999999999,

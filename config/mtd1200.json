@@ -485,7 +485,7 @@
       },
       "trigger": {
         "cpu.latencyTime": 0,
-        "cpu.margin": 0.4,
+        "cpu.margin": 0.35,
         "sched.scene": "touch"
       },
       "gesture": {
@@ -493,7 +493,7 @@
         "sched.scene": "touch"
       },
       "junk": {
-        "cpu.burst": 0.4,
+        "cpu.burst": 0.5,
         "sched.scene": "touch"
       },
       "switch": {

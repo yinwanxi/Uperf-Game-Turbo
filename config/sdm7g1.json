@@ -484,19 +484,19 @@
                 "sched.scene": "idle"
             },
             "touch": {
-                "cpu.margin": 0.2,
+                "cpu.margin": 0.25,
                 "sched.scene": "touch"
             },
             "trigger": {
-                "cpu.margin": 0.2,
+                "cpu.margin": 0.28,
                 "sched.scene": "touch"
             },
             "gesture": {
-                "cpu.margin": 0.2,
+                "cpu.margin": 0.3,
                 "sched.scene": "touch"
             },
             "junk": {
-                "cpu.margin": 0.2,
+                "cpu.margin": 0.4,
                 "sched.scene": "touch"
             },
             "switch": {

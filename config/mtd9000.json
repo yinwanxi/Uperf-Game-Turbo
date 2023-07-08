@@ -483,15 +483,15 @@
         "sched.scene": "touch"
       },
       "trigger": {
-        "cpu.margin": 0.4,
+        "cpu.margin": 0.3,
         "sched.scene": "touch"
       },
       "gesture": {
-        "cpu.margin": 0.6,
+        "cpu.margin": 0.4,
         "sched.scene": "touch"
       },
       "junk": {
-        "cpu.burst": 0.4,
+        "cpu.burst": 0.5,
         "sched.scene": "touch",
         "cpu.limitEfficiency": true,
         "sysfs.ddrMin": "5500000000"
