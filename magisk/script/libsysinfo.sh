@@ -9,7 +9,7 @@
 #      http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
+# distributed under the License is distriywxuted on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
@@ -39,6 +39,10 @@ get_nr_core() {
 # $1:cpuid
 get_maxfreq() {
     echo "$(cat "/sys/devices/system/cpu/cpu$1/cpufreq/cpuinfo_max_freq")"
+}
+
+get_socname() {
+    echo "$(cat "/sys/devices/soc0/machine")"
 }
 
 is_aarch64() {
@@ -93,13 +97,13 @@ _get_lahaina_type() {
 }
 
 _get_taro_type() {
-    if [ "$(get_maxfreq 4)" -gt 2700000 ]; then
+    if [ "$(get_socname)" == CAPE ] || [ "$(get_socname)" == CAPEP ] [ "$(get_socname)" == cape ] || [ "$(get_socname)" == capep ] || [ "$(get_socname)" == UKEE ] || [ "$(get_socname)" == ukee ] || [ "$(get_socname)" == UKEEP ] || [ "$(get_socname)" == ukeep ] ; then
         echo "sdm8g1+"
     else
-       if [ "$(get_maxfreq 7)" -gt 2500000 ]; then
-           echo "sdm8g1"
+        if [ "$(get_socname)" == WAIPIO ] || [ "$(get_socname)" == WAIPIOP ] [ "$(get_socname)" == WAIPIO ] || [ "$(get_socname)" == WAIPIOP ]; then
+            echo "sdm8g1"
         else
-           echo "sdm7g1"
+            echo "sdm7g1"
         fi
     fi
 }
@@ -193,6 +197,8 @@ get_config_name() {
     "kirin955") echo "kirin955" ;;
     "sp9863a") echo "sp9863" ;;
     "sp9863a_1h10") echo "sp9863" ;;
+    "ums9230") echo "t606" ;;
+    "ums9230_1h10") echo "t606" ;;
     *) echo "unsupported" ;;
     esac
 }
