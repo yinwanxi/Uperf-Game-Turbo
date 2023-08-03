@@ -1,7 +1,7 @@
 {
   "meta": {
-    "name": "sdm8g1+/sdm7g2+[22.09.04]", 
-    "author": "yc@coolapk   ❤吟惋兮️❤️改️"
+    "name": "Exynos 1380[22.09.04]", 
+    "author": "yc@coolapk  ❤️吟惋兮❤️改"
   }, 
   "modules": {
     "switcher": {
@@ -38,31 +38,22 @@
       "enable": true, 
       "powerModel": [
         {
-          "efficiency": 140, 
+          "efficiency": 100, 
           "nr": 4, 
-          "typicalPower": 0.5, 
-          "typicalFreq": 1.8, 
-          "sweetFreq": 1.4, 
-          "plainFreq": 1.2, 
+          "typicalPower": 0.4, 
+          "typicalFreq": 2.0, 
+          "sweetFreq": 1.6, 
+          "plainFreq": 1.5, 
           "freeFreq": 0.8
         }, 
         {
-          "efficiency": 340, 
-          "nr": 3, 
-          "typicalPower": 1.8, 
-          "typicalFreq": 2.7, 
-          "sweetFreq": 1.8, 
-          "plainFreq": 1.0, 
-          "freeFreq": 0.7
-        }, 
-        {
-          "efficiency": 420, 
-          "nr": 1, 
-          "typicalPower": 3.4, 
-          "typicalFreq": 3.2, 
-          "sweetFreq": 2.1, 
-          "plainFreq": 1.6, 
-          "freeFreq": 0.8
+          "efficiency": 320, 
+          "nr": 4, 
+          "typicalPower": 2.5, 
+          "typicalFreq": 2.4, 
+          "sweetFreq": 1.7, 
+          "plainFreq": 1.3, 
+          "freeFreq": 1.0
         }
       ]
     }, 
@@ -77,7 +68,7 @@
       }
     }, 
     "sched": {
-      "enable": false, 
+      "enable": true, 
       "cpumask": {
         "all": [
           0, 
@@ -121,10 +112,10 @@
         }, 
         "bg": {
           "bg": "", 
-          "fg": "c1", 
+          "fg": "c0", 
           "idle": "c0", 
-          "touch": "c1", 
-          "boost": "c1"
+          "touch": "c0", 
+          "boost": "c0"
         }, 
         "ui": {
           "bg": "", 
@@ -147,13 +138,6 @@
           "touch": "c1", 
           "boost": "all"
         }, 
-        "fuck": {
-          "bg": "c1", 
-          "fg": "", 
-          "idle": "", 
-          "touch": "", 
-          "boost": ""
-        },
         "gtmain": {
           "bg": "", 
           "fg": "all", 
@@ -205,13 +189,6 @@
           "touch": 97, 
           "boost": 98
         }, 
-        "fuck": {
-          "bg": 98, 
-          "fg": 98, 
-          "idle": 97, 
-          "touch": 97, 
-          "boost": 98
-        },
         "rtsys": {
           "bg": 97, 
           "fg": 97, 
@@ -248,18 +225,6 @@
             }
           ]
         }, 
-        {
-          "name": "国产毒瘤我日你仙人",
-          "regex": "^com.tencent.mobileqq|tv.danmaku.bili|com.tencent.mm|com.smile.gifmaker|com.tencent.qqmusic|com.netease.cloudmusic|com.ss.android.ugc.aweme.lite|com.kuaishou.nebula",
-          "pinned": false,
-          "rules": [
-            {
-              "k": ".",
-              "ac": "fuck",
-              "pc": "fuck"
-            }
-          ]
-        },
         {
           "name": "SurfaceFlinger", 
           "regex": "/system/bin/surfaceflinger", 
@@ -466,8 +431,8 @@
       "fastLimitCapacity": 10.0, 
       "fastLimitRecoverScale": 0.3, 
       "predictThd": 0.3, 
-      "margin": 0.2, 
-      "burst": 0.0, 
+      "margin": 0.21, 
+      "burst": 0.5, 
       "guideCap": true, 
       "limitEfficiency": false
     }, 
@@ -526,10 +491,10 @@
     }, 
     "powersave": {
       "*": {
-        "cpu.latencyTime": 0.8, 
+        "cpu.latencyTime": 0.4, 
         "cpu.slowLimitPower": 1.0, 
         "cpu.fastLimitPower": 1.0, 
-        "cpu.fastLimitCapacity": 1.0, 
+        "cpu.fastLimitCapacity": 4.0, 
         "cpu.margin": 0.1
       }, 
       "idle": {
@@ -545,23 +510,23 @@
       }, 
       "trigger": {
         "cpu.latencyTime": 0.0, 
-        "cpu.margin": 0.1, 
+        "cpu.margin": 0.2, 
         "sched.scene": "touch"
       }, 
       "gesture": {
-        "cpu.margin": 0.1, 
+        "cpu.margin": 0.2, 
         "sched.scene": "touch"
       }, 
       "junk": {
-        "cpu.burst": 0.1, 
+        "cpu.burst": 0.2, 
         "sched.scene": "touch"
       }, 
       "switch": {
         "cpu.latencyTime": 0.0, 
-        "cpu.slowLimitPower": 1.0, 
-        "cpu.fastLimitPower": 2.0, 
+        "cpu.slowLimitPower": 1.5, 
+        "cpu.fastLimitPower": 2.5, 
         "cpu.fastLimitRecoverScale": 0.1, 
-        "cpu.margin": 0.1, 
+        "cpu.margin": 0.3, 
         "sched.scene": "boost"
       }
     }, 
@@ -571,33 +536,31 @@
         "cpu.slowLimitPower": 999.0, 
         "cpu.fastLimitPower": 999.0, 
         "cpu.fastLimitCapacity": 999.0, 
-        "cpu.margin": 0.24,
-        "cpu.burst": 0.2
+        "cpu.margin": 0.3,
+        "cpu.burst": 0.35
       }, 
       "idle": {
+        "cpu.baseSampleTime": 0.01, 
+        "cpu.baseSlackTime": 0.04, 
         "sched.scene": "idle"
       }, 
       "touch": {
-        "cpu.margin": 0.5,
-        "cpu.latencyTime": 0.0,
         "sched.scene": "touch"
       }, 
       "trigger": {
-        "cpu.margin": 0.55, 
-        "cpu.latencyTime": 0.0,
+        "cpu.margin": 0.5, 
         "sched.scene": "touch"
       }, 
       "gesture": {
-        "cpu.margin": 0.5, 
+        "cpu.margin": 0.6, 
         "sched.scene": "touch"
       }, 
       "junk": {
         "cpu.burst": 0.6, 
-        "cpu.latencyTime": 0.0,
         "sched.scene": "touch"
       }, 
       "switch": {
-        "cpu.burst": 0.25, 
+        "cpu.burst": 0.5, 
         "sched.scene": "boost"
       }
     }, 
@@ -607,36 +570,8 @@
         "cpu.slowLimitPower": 999.0, 
         "cpu.fastLimitPower": 999.0, 
         "cpu.fastLimitCapacity": 999.0, 
-        "cpu.burst": 1.0
+        "cpu.margin": 1
       }, 
-      "idle": {
-        "sched.scene": "idle"
-      }, 
-      "touch": {
-        "sched.scene": "touch"
-      }, 
-      "trigger": {
-        "sched.scene": "touch"
-      }, 
-      "gesture": {
-        "sched.scene": "touch"
-      }, 
-      "junk": {
-        "sched.scene": "touch"
-      }, 
-      "switch": {
-        "sched.scene": "boost"
-      }
-    },
-    "crazy":{
-      "*": {
-        "cpu.latencyTime": 0.0, 
-        "cpu.slowLimitPower": 999.0, 
-        "cpu.fastLimitPower": 999.0, 
-        "cpu.fastLimitCapacity": 999.0, 
-        "cpu.margin": 1.0,
-        "cpu.burst": 1.0
-}, 
       "idle": {
         "sched.scene": "idle"
       }, 
