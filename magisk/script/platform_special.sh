@@ -1,6 +1,6 @@
 #!/system/bin/sh
 #
-# Copyright (C) 2023 Ham Jin
+# Copyright (C) 2023 Ham Jin & yinwanxi
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,6 +22,8 @@ BASEDIR="$(dirname "$(readlink -f "$0")")"
 . "$BASEDIR"/libpowercfg.sh
 . "$BASEDIR"/libcgroup.sh
 . "$BASEDIR"/libsysinfo.sh
+
+
 
 # MTK specified
 if [ "$(is_mtk)" = "true" ]; then
@@ -118,6 +120,7 @@ else
     mask_val "0" /sys/module/metis/parameters/vip_link_enable
     mask_val "0" /sys/module/perfmgr/parameters/perfmgr_enable
 fi
+
 # OPLUS
 mask_val "0" /sys/module/cpufreq_bouncing/parameters/enable
 mask_val "0" /proc/task_info/task_sched_info/task_sched_info_enable

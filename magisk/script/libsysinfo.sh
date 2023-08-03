@@ -1,6 +1,6 @@
 #!/system/bin/sh
 #
-# Copyright (C) 2021-2022 Matt Yang
+# Copyright (C) 2021-2022 Matt Yang & yinwanxi
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ get_maxfreq() {
 }
 
 get_socname() {
-    echo "$(cat "/sys/devices/soc0/machine")"
+    echo "$(cat "/sys/devices/soc0/machine"| tr '[A-Z]' '[a-z]')"
 }
 
 is_aarch64() {
@@ -67,6 +67,14 @@ is_mtk() {
     else
         echo "false"
     fi
+}
+
+miui_check(){
+if [ "$(printf '%s\n' "90" "$(getprop ro.miui.ui.version.name)" | sort -V | head -n1)" = "90" ]; then
+  echo "true"
+else
+  echo "false"
+fi
 }
 
 _get_sm6150_type() {
@@ -97,10 +105,10 @@ _get_lahaina_type() {
 }
 
 _get_taro_type() {
-    if [ "$(get_socname)" == CAPE ] || [ "$(get_socname)" == CAPEP ] [ "$(get_socname)" == cape ] || [ "$(get_socname)" == capep ] || [ "$(get_socname)" == UKEE ] || [ "$(get_socname)" == ukee ] || [ "$(get_socname)" == UKEEP ] || [ "$(get_socname)" == ukeep ] ; then
+    if [ "$(get_socname)" == cape ] || [ "$(get_socname)" == capep ] || [ "$(get_socname)" == ukee ] || [ "$(get_socname)" == ukeep ]; then
         echo "sdm8g1+"
     else
-        if [ "$(get_socname)" == WAIPIO ] || [ "$(get_socname)" == WAIPIOP ] [ "$(get_socname)" == WAIPIO ] || [ "$(get_socname)" == WAIPIOP ]; then
+        if [ "$(get_socname)" == waipio ] || [ "$(get_socname)" == waipiop ]; then
             echo "sdm8g1"
         else
             echo "sdm7g1"
@@ -142,10 +150,10 @@ get_config_name() {
     "msm8996pro") echo "sdm820" ;;
     "s5e9925") echo "e2200" ;;
     "exynos2100") echo "e2100" ;;
+    "erd8835") echo "e1380" ;;
+    "universal9925") echo "e2200" ;;
     "exynos1080") echo "e1080" ;;
     "exynos990") echo "e990" ;;
-    "universal9925") echo "e2200" ;;
-    "universal2100") echo "e2100" ;;
     "universal1080") echo "e1080" ;;
     "universal990") echo "e990" ;;
     "universal9825") echo "e9820" ;;
@@ -176,6 +184,8 @@ get_config_name() {
     "mt6983") echo "mtd9000" ;;
     "mt6985") echo "mtd9200" ;;
     "gs101") echo "gs101" ;;
+    "gs201") echo "gs201" ;;
+    "cheetah") echo "gs201" ;;
     "PRL") echo "kirin65x" ;;
     "BLN") echo "kirin65x" ;;
     "hi6250") echo "kirin65x" ;;
@@ -187,10 +197,15 @@ get_config_name() {
     "ANE") echo "kirin710" ;;
     "JSN") echo "kirin710" ;;
     "kirin710") echo "kirin710" ;;
+    "JKM-AL20") echo "kirin710" ;;
+    "STF") echo "kirin960" ;;
+    "kirin960") echo "kirin960" ;;
     "BKL") echo "kirin970" ;;
     "ALP") echo "kirin970" ;;
     "COR") echo "kirin970" ;;
     "kirin970") echo "kirin970" ;;
+    "ELE") echo "kirin980" ;;
+    "kirin980") echo "kirin980" ;;
     "hi3650") echo "kirin955" ;;
     "FRD") echo "kirin955" ;;
     "EVA-TL00") echo "kirin955" ;;
@@ -198,7 +213,9 @@ get_config_name() {
     "sp9863a") echo "sp9863" ;;
     "sp9863a_1h10") echo "sp9863" ;;
     "ums9230") echo "t606" ;;
+    "ums512") echo "t618" ;;
     "ums9230_1h10") echo "t606" ;;
+    "ums512_1h10") echo "t618" ;;
     *) echo "unsupported" ;;
     esac
 }
