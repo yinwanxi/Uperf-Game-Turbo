@@ -474,8 +474,8 @@
     "sysfs": {
       "cpusetTa": "0-7", 
       "cpusetFg": "0-2,4-7", 
-      "cpusetBg": "0-2", 
-      "cpusetSysBg": "0-2", 
+      "cpusetBg": "0-3", 
+      "cpusetSysBg": "0-3", 
       "cpusetRe": "0-6"
     }, 
     "sched": {
