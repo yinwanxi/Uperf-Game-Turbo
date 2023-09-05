@@ -134,6 +134,8 @@ get_config_name() {
     "msm8939") echo "sdm616" ;;
     "msm8916") echo "sdm616" ;;
     "MSM8916") echo "sdm616" ;;
+    "sky") echo "sdm4g2" ;;
+    "parrot") echo "sdm4g2" ;;
     "msm8937") echo "sdm439" ;;
     "msm8953") echo "sdm625" ;;    # 625
     "msm8953pro") echo "sdm625" ;; # 626
@@ -199,6 +201,7 @@ get_config_name() {
     "kirin710") echo "kirin710" ;;
     "JKM-AL20") echo "kirin710" ;;
     "STF") echo "kirin960" ;;
+    "HWI") echo "kirin960" ;;
     "kirin960") echo "kirin960" ;;
     "BKL") echo "kirin970" ;;
     "ALP") echo "kirin970" ;;
@@ -214,8 +217,10 @@ get_config_name() {
     "sp9863a_1h10") echo "sp9863" ;;
     "ums9230") echo "t606" ;;
     "ums512") echo "t618" ;;
+    "ud710") echo "t710" ;;
     "ums9230_1h10") echo "t606" ;;
     "ums512_1h10") echo "t618" ;;
+    "ud710_7h10") echo "t710" ;;
     *) echo "unsupported" ;;
     esac
 }

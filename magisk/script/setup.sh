@@ -155,7 +155,7 @@ done
 echo ""
 echo "* 原模块地址 Uperf https://github.com/yc9559/uperf/"
 echo "* Author: Matt Yang ❤️吟惋兮❤️改"
-echo "* Version: Game Turbo1.26 based on uperf904"
+echo "* Version: Game Turbo1.27 based on uperf904"
 echo "* 请不要破坏Uperf运行环境"
 echo "* 模块会附带安装asopt和yc子模块sfanalysis"
 echo "* "
