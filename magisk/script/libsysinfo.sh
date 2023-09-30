@@ -218,9 +218,11 @@ get_config_name() {
     "ums9230") echo "t606" ;;
     "ums512") echo "t618" ;;
     "ud710") echo "t710" ;;
+    "ums9620") echo "t770" ;;
     "ums9230_1h10") echo "t606" ;;
     "ums512_1h10") echo "t618" ;;
     "ud710_7h10") echo "t710" ;;
+    "ums9620_2h10") echo "t770" ;;
     *) echo "unsupported" ;;
     esac
 }

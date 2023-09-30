@@ -69,15 +69,15 @@ install_uperf() {
     rm -rf $MODULE_PATH/config
     set_perm_recursive $BIN_PATH 0 0 0755 0755 u:object_r:system_file:s0
 }
-install_sfanalysis() {
-    echo "❗❗❗❗❗❗❗❗❗❗"
-    echo "❗ 即将为您安装uperf子模块sfanalysis"
-    echo "❗ 此模块可能导致部分系统无法正常工作"
-    echo "❗ 如果您不清楚这是干什么的或者不知道其风险请取消安装！"
-    echo "❗❗❗❗❗❗❗❗❗❗"
-    echo "❗ 单击音量上键即可确认安装（我想试试，就要安装)"
-    echo "❗ 单击音量下键取消安装sfanalysis（推荐)"
-    echo "❗❗❗❗❗❗❗❗❗❗"
+
+
+check_asopt() {
+    echo "❗ 即将为您安装A-SOUL"
+    echo "❗ 此模块功能为放置游戏线程，优化游戏流畅度"
+    echo "❗ 作者个人建议安装，因为绝大多数厂商的线程都是乱放的"
+    echo "❗ 此线程可极大优化游戏流畅度"
+    echo "❗ 单击音量上键即可确认更新或安装"
+    echo "❗ 单击音量下键取消更新或安装（不推荐)"
     key_click=""
     while [ "$key_click" = "" ]; do
         key_click="$(getevent -qlc 1 | awk '{ print $3 }' | grep 'KEY_')"
@@ -85,17 +85,16 @@ install_sfanalysis() {
     done
     case "$key_click" in
         "KEY_VOLUMEUP")
-            echo "❗您已确认安装，请稍候"
-            echo "❗正在为您安装uperf子模块sfanalysis️"
-            echo "❗若不幸出现问题，卡logo界面15秒后手动重启"
-            echo "❗即可正常开机"
-            magisk --install-module "$MODULE_PATH"/modules/sfanalysis-magisk.zip
-            echo "* 已为您安装sfanalysis️❤️"
+            echo "❗您已确认更新，请稍候"
+            install_corp
+            echo "* 已为您安装ASOUL❤️"
+            echo "* 感谢您的支持与信任😁"
         ;;
         *)
-            echo "❗已为您取消安装sfanalysis"
+            echo "❗非常遗憾"
+            echo "❗已为您取消更新ASOUL💔"
     esac
-    rm -rf "$MODULE_PATH"/modules/sfanalysis-magisk.zip
+    rm -rf "$MODULE_PATH"/modules/asoulopt.zip
 }
 
 get_value() {
@@ -155,9 +154,9 @@ done
 echo ""
 echo "* 原模块地址 Uperf https://github.com/yc9559/uperf/"
 echo "* Author: Matt Yang ❤️吟惋兮❤️改"
-echo "* Version: Game Turbo1.27 based on uperf904"
+echo "* Version: Game Turbo1.28 based on uperf904"
 echo "* 请不要破坏Uperf运行环境"
-echo "* 模块会附带安装asopt和yc子模块sfanalysis"
+echo "* 模块会附带安装asopt"
 echo "* "
 echo "* 极速模式请自备散热，删除温控体验更佳"
 echo "* 本模块与限频模块、部分优化模块冲突"
@@ -174,9 +173,9 @@ echo "- 正在为您安装Uperf Game Turbo❤️"
 install_uperf
 #unlock_limit
 echo "* Uperf Game Turbo安装成功❤️"
-install_corp
+#install_corp
 echo "* asopt安装成功❤️"
-install_sfanalysis
+check_asopt
 echo "* 重启即可"
 echo "* 欢迎使用Uperf Game Turbo"
 echo "* 祝体验愉快"

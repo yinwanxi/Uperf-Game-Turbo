@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONTABLE>
+    <CMD name="PERF_RES_GPU_GED_MARGIN_MODE" id="0x00c0c100">
+        <Entry path="/sys/kernel/ged/hal/dvfs_margin_value"></Entry>
+        <Compare>more</Compare>
+        <MaxValue>6553599</MaxValue>
+        <MinValue>1</MinValue>
+        <DefaultValue>130</DefaultValue>
+    </CMD>
+    <CMD name="PERF_RES_NET_WIFI_CAM" id="0x02800000">
+        <Entry path="/proc/net/wlan/setCAM"></Entry>
+        <Compare>more</Compare>
+        <MaxValue>1</MaxValue>
+        <MinValue>0</MinValue>
+        <DefaultValue>1</DefaultValue>
+        <Prefix>CAM^</Prefix>
+        <Valid>1</Valid>
+    </CMD>
+    <CMD name="PERF_RES_POWERHAL_TOUCH_BOOST_EAS_BOOST" id="0x03408300">
+        <Entry path="/proc/perfmgr/tchbst/user/usrtch"></Entry>
+        <Compare>more</Compare>
+        <MaxValue>100</MaxValue>
+        <MinValue>0</MinValue>
+        <DefaultValue>60</DefaultValue>
+        <Prefix>eas_boost^</Prefix>
+    </CMD>
+    <CMD name="PERF_RES_GPU_GED_TIMER_BASE_DVFS_MARGIN" id="0x00c0c200">
+        <Entry path="/sys/kernel/ged/hal/timer_base_dvfs_margin"></Entry>
+        <Compare>more</Compare>
+        <MaxValue>2000000000</MaxValue>
+        <MinValue>-1</MinValue>
+        <DefaultValue>798</DefaultValue>
+    </CMD>
+    <CMD name="PERF_RES_GPU_GED_LOADING_BASE_DVFS_STEP" id="0x00c0c300">
+        <Entry path="/sys/kernel/ged/hal/loading_base_dvfs_step"></Entry>
+        <Compare>more</Compare>
+        <MaxValue>25855</MaxValue>
+        <MinValue>0</MinValue>
+        <DefaultValue>4</DefaultValue>
+    </CMD>
+</CONTABLE>
