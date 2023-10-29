@@ -1,7 +1,7 @@
 {
   "meta": {
-    "name": "sdm855/sdm855+/sdm860[22.09.04]",
-    "author": "yc@coolapk   ❤吟惋兮️❤️"
+    "name": "Unisoc T770",
+    "author": "❤吟惋兮️❤️"
   },
   "modules": {
     "switcher": {
@@ -47,22 +47,22 @@
           "freeFreq": 0.7
         },
         {
-          "efficiency": 250,
+          "efficiency": 220,
           "nr": 3,
-          "typicalPower": 1.53,
-          "typicalFreq": 2.4,
-          "sweetFreq": 1.8,
-          "plainFreq": 1.0,
-          "freeFreq": 0.7
+          "typicalPower": 1.5,
+          "typicalFreq": 2.0,
+          "sweetFreq": 1.7,
+          "plainFreq": 1.2,
+          "freeFreq": 1
         },
         {
-          "efficiency": 250,
+          "efficiency": 245,
           "nr": 1,
-          "typicalPower": 2.06,
-          "typicalFreq": 2.8,
+          "typicalPower": 2,
+          "typicalFreq": 2.5,
           "sweetFreq": 2.2,
-          "plainFreq": 1.4,
-          "freeFreq": 0.8
+          "plainFreq": 1.6,
+          "freeFreq": 1
         }
       ]
     },
@@ -471,7 +471,7 @@
         "cpu.slowLimitPower": 2.0,
         "cpu.fastLimitPower": 2.0,
         "cpu.fastLimitCapacity": 16.0,
-        "cpu.margin": 0.21
+        "cpu.margin": 0.2
       },
       "idle": {
         "cpu.baseSampleTime": 0.04,
@@ -558,7 +558,7 @@
         "cpu.fastLimitPower": 999.0,
         "cpu.fastLimitCapacity": 999.0,
         "cpu.margin": 0.32,
-        "cpu.burst": 0.38
+        "cpu.burst": 0.34
       },
       "idle": {
         "sched.scene": "touch"

@@ -468,7 +468,7 @@
         "cpu.fastLimitPower": 2,
         "cpu.fastLimitCapacity": 16,
         "cpu.fastLimitRecoverScale": 0.4,
-        "cpu.margin": 0.2,
+        "cpu.margin": 0.25,
         "sysfs.ddrboost": "1",
         "sysfs.cciboost": "1"
       },

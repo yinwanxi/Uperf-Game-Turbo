@@ -1,6 +1,6 @@
 {
   "meta": {
-    "name": "sdm8gen2", 
+    "name": "sdm8gen3", 
     "author": "yc@coolapk   ❤吟惋兮️❤️️"
   }, 
   "modules": {
@@ -38,29 +38,38 @@
       "enable": true, 
       "powerModel": [
         {
-          "efficiency": 140, 
-          "nr": 3, 
-          "typicalPower": 0.5, 
-          "typicalFreq": 1.9, 
+          "efficiency": 200, 
+          "nr": 2, 
+          "typicalPower": 1, 
+          "typicalFreq": 2.3, 
           "sweetFreq": 1.6, 
           "plainFreq": 1.4, 
           "freeFreq": 0.6
         }, 
         {
-          "efficiency": 320, 
-          "nr": 4, 
-          "typicalPower": 1.9, 
-          "typicalFreq": 2.8, 
+          "efficiency": 300, 
+          "nr": 2, 
+          "typicalPower": 2.1, 
+          "typicalFreq": 2.9, 
           "sweetFreq": 1.8, 
-          "plainFreq": 1.0, 
-          "freeFreq": 0.7
+          "plainFreq": 1.2, 
+          "freeFreq": 0.6
+        },
+        {
+          "efficiency": 320, 
+          "nr": 3, 
+          "typicalPower": 2.2, 
+          "typicalFreq": 3.15, 
+          "sweetFreq": 1.8, 
+          "plainFreq": 1.2, 
+          "freeFreq": 0.8
         }, 
         {
-          "efficiency": 450, 
+          "efficiency": 500, 
           "nr": 1, 
-          "typicalPower": 3.6, 
-          "typicalFreq": 3.2, 
-          "sweetFreq": 2.2, 
+          "typicalPower": 3.8, 
+          "typicalFreq": 3.3, 
+          "sweetFreq": 2.0, 
           "plainFreq": 1.6, 
           "freeFreq": 0.8
         }
@@ -69,14 +78,10 @@
     "sysfs": {
       "enable": true, 
       "knob": {
-        "cpuFreqMin0":"/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq",
         "cpusetTa": "/dev/cpuset/top-app/cpus", 
         "cpusetFg": "/dev/cpuset/foreground/cpus", 
         "cpusetBg": "/dev/cpuset/background/cpus", 
         "cpusetSysBg": "/dev/cpuset/system-background/cpus", 
-        "LLCCmax": "/sys/devices/system/cpu/bus_dcvs/LLCC/hw_max_freq",
-        "L3max": "/sys/devices/system/cpu/bus_dcvs/L3/hw_max_freq",
-        "DDRmax": "/sys/devices/system/cpu/bus_dcvs/DDR/hw_max_freq",
         "cpusetRe": "/dev/cpuset/restricted/cpus"
       }
     }, 
@@ -95,16 +100,18 @@
         ], 
         "c0": [
           0, 
-          1, 
-          2
+          1
         ], 
         "c1": [
-          3,
-          4, 
-          5, 
-          6
+          2,
+          3
         ], 
         "c2": [
+          4,
+          5,
+          6
+        ],
+        "c3": [
           7
         ]
       }, 
@@ -125,34 +132,34 @@
         }, 
         "bg": {
           "bg": "", 
-          "fg": "c1", 
-          "idle": "c1", 
-          "touch": "c1", 
-          "boost": "c1"
+          "fg": "c1,c2", 
+          "idle": "c1,c2", 
+          "touch": "c1,c2", 
+          "boost": "c1,c2"
         }, 
         "ui": {
           "bg": "", 
           "fg": "all", 
           "idle": "all", 
-          "touch": "c1", 
+          "touch": "c1,c2", 
           "boost": "all"
         }, 
         "crit": {
           "bg": "", 
           "fg": "all", 
           "idle": "all", 
-          "touch": "c1", 
-          "boost": "c1"
+          "touch": "c1,c2", 
+          "boost": "c1,c2"
         }, 
         "gtcoop": {
           "bg": "", 
           "fg": "all", 
           "idle": "all", 
-          "touch": "c1", 
+          "touch": "c1,c2", 
           "boost": "all"
         }, 
         "gtcoop": {
-          "bg": "c1", 
+          "bg": "c1,c2", 
           "fg": "", 
           "idle": "", 
           "touch": "", 
@@ -162,7 +169,7 @@
           "bg": "", 
           "fg": "all", 
           "idle": "all", 
-          "touch": "c2", 
+          "touch": "c3", 
           "boost": "all"
         }
       }, 
@@ -476,14 +483,10 @@
       "limitEfficiency": false
     }, 
     "sysfs": {
-      "LLCCmax":"1066000",
-      "L3max":"1804800",
-      "DDRmax":"4224000",
-      "cpuFreqMin0":"307200",
       "cpusetTa": "0-7", 
-      "cpusetFg": "0-2,6-7", 
-      "cpusetBg": "0-2", 
-      "cpusetSysBg": "0-2", 
+      "cpusetFg": "0-4,6-7", 
+      "cpusetBg": "0-4", 
+      "cpusetSysBg": "0-4", 
       "cpusetRe": "0-6"
     }, 
     "sched": {
@@ -493,12 +496,11 @@
   "presets": {
     "balance": {
       "*": {
-        "sysfs.cpuFreqMin0":"1017600",
         "cpu.latencyTime": 0.2, 
         "cpu.slowLimitPower": 2.0, 
         "cpu.fastLimitPower": 2.0, 
         "cpu.fastLimitCapacity": 16.0, 
-        "cpu.margin": 0.21
+        "cpu.margin": 0.2
       }, 
       "idle": {
         "cpu.baseSampleTime": 0.04, 
@@ -576,16 +578,12 @@
     }, 
     "performance": {
       "*": {
-        "sysfs.cpuFreqMin0":"1228800",
-        "sysfs.LLCCmax": 999999999,
-        "sysfs.L3max": 999999999,
-        "sysfs.DDRmax": 999999999,
         "cpu.latencyTime": 0.0, 
         "cpu.slowLimitPower": 999.0, 
         "cpu.fastLimitPower": 999.0, 
         "cpu.fastLimitCapacity": 999.0, 
         "cpu.margin": 0.2,
-        "cpu.burst": 0.22
+        "cpu.burst": 0.2
       }, 
       "idle": {
         "sched.scene": "idle"
@@ -616,9 +614,6 @@
     }, 
     "fast": {
       "*": {
-        "sysfs.LLCCmax": 999999999,
-        "sysfs.L3max": 999999999,
-        "sysfs.DDRmax": 999999999,
         "cpu.latencyTime": 0.0, 
         "cpu.slowLimitPower": 999.0, 
         "cpu.fastLimitPower": 999.0, 

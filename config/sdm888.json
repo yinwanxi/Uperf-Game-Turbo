@@ -482,7 +482,7 @@
     "presets": {
         "balance": {
             "*": {
-                "sysfs.CPUllccmax": "7110",
+                "sysfs.CPUllccmax": "9155",
                 "sysfs.CPUllccmin": "2288",
                 "sysfs.CPU4ddrmin": "762",
                 "sysfs.CPU4ddrmax": "5931",
@@ -490,15 +490,14 @@
                 "sysfs.CPU7ddrmax": "5931",
                 "sysfs.CPUl3max": "614400000",
                 "sysfs.CPUl3min": "300000000",
-                "sysfs.CPU7max": "2035200",
-                "sysfs.CPU4max": "1881600",
-                "sysfs.UFSmax": "75000000",
+                "sysfs.CPU7max": "2496000",
+                "sysfs.CPU4max": "2227200",
                 "cpu.latencyTime": 0.2,
                 "cpu.predictThd": 0.2,
                 "cpu.slowLimitPower": 1,
                 "cpu.fastLimitPower": 2,
                 "cpu.fastLimitCapacity": 15.0,
-                "cpu.margin": 0.2
+                "cpu.margin": 0.22
             },
             "idle": {
                 "cpu.baseSampleTime": 0.04,
@@ -506,15 +505,15 @@
                 "sched.scene": "idle"
             },
             "touch": {
-                "cpu.margin": 0.2,
+                "cpu.margin": 0.25,
                 "sched.scene": "touch"
             },
             "trigger": {
-                "cpu.margin": 0.25,
+                "cpu.margin": 0.3,
                 "sched.scene": "touch"
             },
             "gesture": {
-                "cpu.margin": 0.25,
+                "cpu.margin": 0.3,
                 "sched.scene": "touch"
             },
             "junk": {
@@ -522,6 +521,7 @@
                 "sched.scene": "touch"
             },
             "switch": {
+                "cpu.margin": 0.4,
                 "sched.scene": "boost"
             }
         },
@@ -572,16 +572,10 @@
         },
         "performance": {
             "*": {
-                "sysfs.CPUllccmax": "15258",
                 "sysfs.CPUllccmin": "9155",
                 "sysfs.CPU4ddrmin": "5931",
-                "sysfs.CPU4ddrmax": "12191",
                 "sysfs.CPU7ddrmin": "5931",
-                "sysfs.CPU7ddrmax": "5931",
-                "sysfs.CPUl3max": "1593600000",
                 "sysfs.CPUl3min": "979200000",
-                "sysfs.CPU7max": "2496000",
-                "sysfs.CPU4max": "2227200",
                 "sysfs.UFSmax": "300000000",
                 "cpu.latencyTime": 0.0,
                 "cpu.slowLimitPower": 20.0,
