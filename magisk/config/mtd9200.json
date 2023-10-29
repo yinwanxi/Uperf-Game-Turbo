@@ -477,7 +477,7 @@
                 "sched.scene": "touch"
             },
             "trigger": {
-                "cpu.margin": 0.3,
+                "cpu.margin": 0.35,
                 "sched.scene": "touch"
             },
             "gesture": {
@@ -506,7 +506,7 @@
                 "cpu.slowLimitPower": 1,
                 "cpu.fastLimitPower": 1,
                 "cpu.fastLimitCapacity": 1,
-                "cpu.margin": 0.05,
+                "cpu.margin": 0.1,
                 "sysfs.ddrMin": "2667000000"
             },
             "idle": {

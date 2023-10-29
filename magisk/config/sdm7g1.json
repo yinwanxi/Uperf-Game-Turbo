@@ -476,7 +476,7 @@
                 "cpu.slowLimitPower": 2,
                 "cpu.fastLimitPower": 2,
                 "cpu.fastLimitCapacity": 16.0,
-                "cpu.margin": 0.25
+                "cpu.margin": 0.28
             },
             "idle": {
                 "cpu.baseSampleTime": 0.04,

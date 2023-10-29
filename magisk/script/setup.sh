@@ -154,7 +154,7 @@ done
 echo ""
 echo "* 原模块地址 Uperf https://github.com/yc9559/uperf/"
 echo "* Author: Matt Yang ❤️吟惋兮❤️改"
-echo "* Version: Game Turbo1.28 based on uperf904"
+echo "* Version: Game Turbo1.29 based on uperf904"
 echo "* 请不要破坏Uperf运行环境"
 echo "* 模块会附带安装asopt"
 echo "* "
@@ -174,8 +174,8 @@ install_uperf
 #unlock_limit
 echo "* Uperf Game Turbo安装成功❤️"
 #install_corp
-echo "* asopt安装成功❤️"
 check_asopt
+echo "* asopt安装成功❤️"
 echo "* 重启即可"
 echo "* 欢迎使用Uperf Game Turbo"
 echo "* 祝体验愉快"

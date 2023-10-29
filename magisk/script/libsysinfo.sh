@@ -119,6 +119,7 @@ _get_taro_type() {
 # $1:board_name
 get_config_name() {
     case "$1" in
+    "pineapple") echo "sdm8g3" ;;
     "kalama") echo "sdm8g2" ;;
     "taro") echo "$(_get_taro_type)" ;;
     "lahaina") echo "$(_get_lahaina_type)" ;;
@@ -164,6 +165,7 @@ get_config_name() {
     "universal8895") echo "e8895" ;;
     "universal8890") echo "e8890" ;;
     "universal7420") echo "e7420" ;;
+    "mt6580") echo "mt6580" ;;
     "mt6765") echo "mtp35" ;; # Helio P35(mt6765)/G35(mt6765g)/G37(mt6765h)
     "mt6768") echo "mtg80" ;; # Helio P65(mt6768)/G70(mt6769v)/G80(mt6769t)/G85(mt6769z)
     "mt6771") echo "mtp70" ;;
@@ -179,6 +181,7 @@ get_config_name() {
     "mt6875") echo "mtd820" ;;
     "mt6877") echo "mtd920" ;;
     "mt6885") echo "mtd1000" ;;
+    "mt6886") echo "mtd7000" ;;
     "mt6889") echo "mtd1000" ;;
     "mt6891") echo "mtd1100" ;;
     "mt6893") echo "mtd1200" ;;

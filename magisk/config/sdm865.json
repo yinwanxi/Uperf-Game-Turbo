@@ -471,7 +471,7 @@
         "cpu.slowLimitPower": 2.0,
         "cpu.fastLimitPower": 2.0,
         "cpu.fastLimitCapacity": 16.0,
-        "cpu.margin": 0.25
+        "cpu.margin": 0.28
       },
       "idle": {
         "cpu.baseSampleTime": 0.04,
@@ -558,7 +558,7 @@
         "cpu.fastLimitPower": 999.0,
         "cpu.fastLimitCapacity": 999.0,
         "cpu.margin": 0.29,
-        "cpu.burst": 0.29
+        "cpu.burst": 0.32
       },
       "idle": {
         "sched.scene": "touch"

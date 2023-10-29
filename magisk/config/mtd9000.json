@@ -472,7 +472,7 @@
                 "cpu.fastLimitPower": 2,
                 "cpu.fastLimitCapacity": 16,
                 "cpu.fastLimitRecoverScale": 15,
-                "cpu.margin": 0.18,
+                "cpu.margin": 0.2,
                 "sysfs.ddrMin": "3200000000"
             },
             "idle": {
@@ -560,7 +560,7 @@
                 "cpu.fastLimitCapacity": 20,
                 "cpu.fastLimitRecoverScale": 200,
                 "cpu.margin": 0.23,
-                "cpu.burst": 0.2,
+                "cpu.burst": 0.25,
                 "sysfs.ddrMin": "4266000000"
             },
             "idle": {
@@ -569,15 +569,15 @@
                 "sched.scene": "idle"
             },
             "touch": {
-                "cpu.margin": 0.5,
-                "sched.scene": "touch"
-            },
-            "trigger": {
                 "cpu.margin": 0.55,
                 "sched.scene": "touch"
             },
+            "trigger": {
+                "cpu.margin": 0.6,
+                "sched.scene": "touch"
+            },
             "gesture": {
-                "cpu.margin": 0.5,
+                "cpu.margin": 0.55,
                 "sched.scene": "touch"
             },
             "junk": {
@@ -585,7 +585,7 @@
                 "sched.scene": "touch"
             },
             "switch": {
-                "cpu.burst": 0.2,
+                "cpu.burst": 0.4,
                 "sched.scene": "boost"
             }
         },

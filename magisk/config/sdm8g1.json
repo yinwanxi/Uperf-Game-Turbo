@@ -475,14 +475,14 @@
                 "sysfs.CPUddrmin": "285000000",
                 "sysfs.CPUllccmax": "545000000",
                 "sysfs.CPUddrmax": "545000000",
-                "sysfs.scaling_max4": "1766400",
-                "sysfs.scaling_max7": "2035200",
+                "sysfs.scaling_max4": "2112000",
+                "sysfs.scaling_max7": "2496000",
                 "cpu.latencyTime": 0.2,
                 "cpu.predictThd": 0.2,
                 "cpu.slowLimitPower": 2,
                 "cpu.fastLimitPower": 2,
                 "cpu.fastLimitCapacity": 15.0,
-                "cpu.margin": 0.2
+                "cpu.margin": 0.22
             },
             "idle": {
                 "cpu.baseSampleTime": 0.04,
@@ -555,13 +555,11 @@
                 "sysfs.CPUllccmin": "791000000",
                 "sysfs.CPUllccmax": "818000000",
                 "sysfs.CPUddrmax": "818000000",
-                "sysfs.scaling_max4": "2112000",
-                "sysfs.scaling_max7": "2496000",
                 "cpu.latencyTime": 0.0,
                 "cpu.slowLimitPower": 10.0,
                 "cpu.fastLimitPower": 20.0,
                 "cpu.fastLimitCapacity": 360.0,
-                "cpu.margin": 0.4
+                "cpu.margin": 0.42
             },
             "idle": {
                 "cpu.baseSampleTime": 0.01,

@@ -20,7 +20,7 @@ BASEDIR="$(dirname $(readlink -f "$0"))"
 crash_recuser() {
     rm $BASEDIR/logcat.log
     logcat -f $BASEDIR/logcat.log &
-    sleep 20
+    sleep 40
     killall logcat
     rm -f $BASEDIR/flag/need_recuser
 }
