@@ -150,6 +150,7 @@ get_config_name() {
     "msm8956") echo "sdm650" ;;
     "msm8998") echo "sdm835" ;;
     "msm8996") echo "sdm820" ;;
+    "msm8909") echo "sdm210" ;;
     "msm8996pro") echo "sdm820" ;;
     "s5e9925") echo "e2200" ;;
     "exynos2100") echo "e2100" ;;
@@ -181,16 +182,21 @@ get_config_name() {
     "mt6875") echo "mtd820" ;;
     "mt6877") echo "mtd920" ;;
     "mt6885") echo "mtd1000" ;;
+    "mt6835") echo "mtd6100" ;;
     "mt6886") echo "mtd7000" ;;
     "mt6889") echo "mtd1000" ;;
     "mt6891") echo "mtd1100" ;;
     "mt6893") echo "mtd1200" ;;
     "mt6895") echo "mtd8100" ;;
+    "mt6897") echo "mtd8300" ;;
     "mt6983") echo "mtd9000" ;;
     "mt6985") echo "mtd9200" ;;
     "gs101") echo "gs101" ;;
     "gs201") echo "gs201" ;;
     "cheetah") echo "gs201" ;;
+    "husky") echo "gs301" ;;
+    "zuma") echo "gs301" ;;
+    "shiba") echo "gs301" ;;
     "PRL") echo "kirin65x" ;;
     "BLN") echo "kirin65x" ;;
     "hi6250") echo "kirin65x" ;;
@@ -206,6 +212,8 @@ get_config_name() {
     "STF") echo "kirin960" ;;
     "HWI") echo "kirin960" ;;
     "kirin960") echo "kirin960" ;;
+    "hi3660") echo "kirin960" ;;
+    "CMR") echo "kirin960" ;;
     "BKL") echo "kirin970" ;;
     "ALP") echo "kirin970" ;;
     "COR") echo "kirin970" ;;
