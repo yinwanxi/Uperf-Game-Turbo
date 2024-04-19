@@ -22,7 +22,7 @@ BASEDIR="$(dirname $(readlink -f "$0"))"
 # $1:error_message
 abort() {
     echo "$1"
-    echo "! Uperf installation failed."
+    echo "! Uperf Game Turbo installation failed."
     exit 1
 }
 
@@ -75,9 +75,16 @@ check_asopt() {
     echo "❗ 即将为您安装A-SOUL"
     echo "❗ 此模块功能为放置游戏线程，优化游戏流畅度"
     echo "❗ 作者个人建议安装，因为绝大多数厂商的线程都是乱放的"
-    echo "❗ 此线程可极大优化游戏流畅度"
+    echo "❗ 此操作可极大优化游戏流畅度"
     echo "❗ 单击音量上键即可确认更新或安装"
     echo "❗ 单击音量下键取消更新或安装（不推荐)"
+    echo " ----------------------------------------------------------"
+    echo "❗ A-SOUL will be installed for you now"
+    echo "❗ This module is used to place threads and optimize game fluency"
+    echo "❗ I recommends installation, because most phone's threads are randomly placed"
+    echo "❗ This can greatly optimize the game fluency"
+    echo "❗ Click the volume up to confirm the update or installation"
+    echo "❗ Click the volume down to cancel the update or installation (not recommended)"
     key_click=""
     while [ "$key_click" = "" ]; do
         key_click="$(getevent -qlc 1 | awk '{ print $3 }' | grep 'KEY_')"
@@ -86,13 +93,18 @@ check_asopt() {
     case "$key_click" in
         "KEY_VOLUMEUP")
             echo "❗您已确认更新，请稍候"
+            echo "❗You have confirmed the update, please wait"
             install_corp
             echo "* 已为您安装ASOUL❤️"
             echo "* 感谢您的支持与信任😁"
+            echo "* ASOUL has been installed for you❤️"
+            echo "* Thank you for your support and trust😁"
         ;;
         *)
             echo "❗非常遗憾"
             echo "❗已为您取消更新ASOUL💔"
+            echo "❗What a pity"
+            echo "❗The update of ASOUL has been cancelled for you💔"
     esac
     rm -rf "$MODULE_PATH"/modules/asoulopt.zip
 }
@@ -115,20 +127,28 @@ install_corp() {
             
             echo "* 您正在使用旧版asopt️"
             echo "* Uperf Game Turbo将为您更新至模块内版本️"
+            echo "* You are using an old version asopt"
+            echo "* Updating for you️"
             killall -9 AsoulOpt
             rm -rf /data/adb/modules*/asoul_affinity_opt
             echo "- 正在为您安装asopt"
+            echo "- Installing️"
             magisk --install-module "$MODULE_PATH"/modules/asoulopt.zip
         else
             echo "* 您正在使用新版本的asopt"
             echo "* Uperf Game Turbo将不予操作️"
+            echo "* You are using new version of asopt"
+            echo "* Uperf Game Turbo will not operate️"
         fi
     else
         echo "* 您尚未安装asopt"
         echo "* Uperf Game Turbo将尝试为您第一次安装️"
+        echo "* You have not installed asopt"
+        echo "* Uperf Game Turbo will try to install it for you for the first time"
         killall -9 AsoulOpt
         rm -rf /data/adb/modules*/asoul_affinity_opt
         echo "- 正在为您安装asopt"
+        echo "- Installing asopt for you"
         magisk --install-module "$MODULE_PATH"/modules/asoulopt.zip
     fi
     rm -rf "$MODULE_PATH"/modules/asoulopt.zip
@@ -152,9 +172,10 @@ done
 }
 
 echo ""
-echo "* 原模块地址 Uperf https://github.com/yc9559/uperf/"
+echo "* Uperf URL: https://github.com/yc9559/uperf/"
+echo "* Uperf Game Turbo URL: https://github.com/yinwanxi/Uperf-Game-Turbo"
 echo "* Author: Matt Yang ❤️吟惋兮❤️改"
-echo "* Version: Game Turbo1.31 based on uperf904"
+echo "* Version: Game Turbo1.34 based on uperf904"
 echo "* 请不要破坏Uperf运行环境"
 echo "* 模块会附带安装asopt"
 echo "* "
@@ -170,13 +191,37 @@ echo "* WoShaNiMa.OnePlus.ColorOS.nimasile😅"
 echo "* "
 echo "* ❤️吟惋兮❤️"
 echo "- 正在为您安装Uperf Game Turbo❤️"
+echo "-----------------------------------------------------"
+echo "-----------------------------------------------------"
+echo "* Uperf URL: https://github.com/yc9559/uperf/"
+echo "* Uperf Game Turbo URL: https://github.com/yinwanxi/Uperf-Game-Turbo"
+echo "* Author: Matt Yang ❤️yinwanxi❤️改"
+echo "* Version: Game Turbo1.34 based on uperf904"
+echo "* Please do not destroy the Uperf running environment"
+echo "* Please prepare for heat dissipation at fast mode"
+echo "* It is better to delete termal"
+echo "* The module will be installed with asopt"
+echo "* This module conflicts with the frequency limiting module and some optimization modules"
+echo "* Module may conflict with some kernel"
+echo "* Please ask the kernel author in advance"
+echo "* Please do not destroy the Uperf Game Turbo running environment!!!"
+echo "* Please do not change/switch the CPU controller yourself!!!"
+echo "* "
+echo "* ❤ yinwanxi❤️"
+echo "- Installing Uperf Game Turbo for you❤️"
+
 install_uperf
 #unlock_limit
 echo "* Uperf Game Turbo安装成功❤️"
+echo "* Uperf Game Turbo installed successfully❤️"
 #install_corp
 check_asopt
 echo "* 模块安装完成❤️"
 echo "* 重启即可"
 echo "* 欢迎使用Uperf Game Turbo"
 echo "* 祝体验愉快"
+echo "* Module installation completed❤️"
+echo "* Please reboot"
+echo "* Welcome to Uperf Game Turbo"
+echo "* Have a pleasant experience"
 fix_module_prop

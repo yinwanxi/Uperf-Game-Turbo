@@ -116,10 +116,19 @@ _get_taro_type() {
     fi
 }
 
+_get_pinekala_type() {
+    if [ "$(get_maxfreq 7)" -gt 3000000 ]; then
+        echo "sdm8g3"
+        else
+        echo "sdm7+g3"
+    fi
+}
+
+
 # $1:board_name
 get_config_name() {
     case "$1" in
-    "pineapple") echo "sdm8g3" ;;
+    "pineapple") echo "$(_get_pinekala_type)" ;;
     "kalama") echo "sdm8g2" ;;
     "taro") echo "$(_get_taro_type)" ;;
     "lahaina") echo "$(_get_lahaina_type)" ;;
@@ -182,7 +191,6 @@ get_config_name() {
     "mt6875") echo "mtd820" ;;
     "mt6877") echo "mtd920" ;;
     "mt6885") echo "mtd1000" ;;
-    "mt6835") echo "mtd6100" ;;
     "mt6886") echo "mtd7000" ;;
     "mt6889") echo "mtd1000" ;;
     "mt6891") echo "mtd1100" ;;

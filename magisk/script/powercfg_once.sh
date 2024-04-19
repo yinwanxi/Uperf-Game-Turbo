@@ -142,14 +142,13 @@ disable_kernel_boost() {
     lock "/proc/ppm/*"
     lock_val "0" "/sys/module/mtk_fpsgo/parameters/boost_affinity*"
     lock_val "0" "/sys/module/fbt_cpu/parameters/boost_affinity*"
-    for it in /sys/kernel/fpsgo/fbt/limit*; do lock_val "0" "$it"; done
+    lock_val "9999000" "/sys/kernel/fpsgo/fbt/limit_*"
     lock_val "0" /sys/kernel/fpsgo/fbt/switch_idleprefer
     lock_val "1" /proc/perfmgr/syslimiter/syslimiter_force_disable
     lock_val "300" /sys/kernel/fpsgo/fbt/thrm_temp_th
     lock_val "-1" /sys/kernel/fpsgo/fbt/thrm_limit_cpu
     lock_val "-1" /sys/kernel/fpsgo/fbt/thrm_sub_cpu
 
-    stop power-hal-1-0 && start power-hal-1-0
     # Samsung
     mutate "0" "/sys/class/input_booster/*"
 
