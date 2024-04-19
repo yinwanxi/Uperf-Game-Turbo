@@ -446,7 +446,7 @@
             "fastLimitCapacity": 6.0,
             "fastLimitRecoverScale": 0.2,
             "predictThd": 0.6,
-            "margin": 0.17,
+            "margin": 0.25,
             "burst": 0.0,
             "guideCap": true,
             "limitEfficiency": true
@@ -482,7 +482,7 @@
                 "cpu.slowLimitPower": 2,
                 "cpu.fastLimitPower": 2,
                 "cpu.fastLimitCapacity": 15.0,
-                "cpu.margin": 0.22
+                "cpu.margin": 0.26
             },
             "idle": {
                 "cpu.baseSampleTime": 0.04,
@@ -506,6 +506,8 @@
                 "sched.scene": "touch"
             },
             "switch": {
+                                "cpu.margin": 0.6,
+
                 "sched.scene": "boost"
             }
         },
@@ -559,7 +561,7 @@
                 "cpu.slowLimitPower": 10.0,
                 "cpu.fastLimitPower": 20.0,
                 "cpu.fastLimitCapacity": 360.0,
-                "cpu.margin": 0.42
+                "cpu.margin": 0.48
             },
             "idle": {
                 "cpu.baseSampleTime": 0.01,
@@ -582,7 +584,7 @@
                 "sched.scene": "touch"
             },
             "switch": {
-                "cpu.margin": 0.3,
+                "cpu.margin": 0.7,
                 "sched.scene": "boost"
             }
         },

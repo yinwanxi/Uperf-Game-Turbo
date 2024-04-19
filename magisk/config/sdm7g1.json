@@ -500,6 +500,7 @@
                 "sched.scene": "touch"
             },
             "switch": {
+                "cpu.margin": 0.6,
                 "sched.scene": "boost"
             }
         },
@@ -566,7 +567,7 @@
                 "sched.scene": "touch"
             },
             "switch": {
-                "cpu.margin": 0.3,
+                "cpu.margin": 0.6,
                 "sched.scene": "boost"
             }
         },

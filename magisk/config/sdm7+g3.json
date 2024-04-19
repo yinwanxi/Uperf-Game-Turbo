@@ -1,6 +1,6 @@
 {
   "meta": {
-    "name": "sdm8gen2", 
+    "name": "sdm 7+gen3 ", 
     "author": "yc@coolapk   ❤吟惋兮️❤️️"
   }, 
   "modules": {
@@ -50,17 +50,17 @@
           "efficiency": 320, 
           "nr": 4, 
           "typicalPower": 1.9, 
-          "typicalFreq": 2.8, 
+          "typicalFreq": 2.6, 
           "sweetFreq": 1.8, 
           "plainFreq": 1.0, 
           "freeFreq": 0.7
         }, 
         {
-          "efficiency": 450, 
+          "efficiency": 500, 
           "nr": 1, 
           "typicalPower": 3.6, 
-          "typicalFreq": 3.2, 
-          "sweetFreq": 2.2, 
+          "typicalFreq": 2.8, 
+          "sweetFreq": 2, 
           "plainFreq": 1.6, 
           "freeFreq": 0.8
         }
@@ -526,10 +526,10 @@
       }, 
       "switch": {
         "cpu.latencyTime": 0.0, 
-        "cpu.slowLimitPower": 6.0, 
-        "cpu.fastLimitPower": 8.0, 
+        "cpu.slowLimitPower": 2.0, 
+        "cpu.fastLimitPower": 12.0, 
         "cpu.fastLimitRecoverScale": 0.1, 
-        "cpu.margin": 0.65, 
+        "cpu.margin": 0.6, 
         "sched.scene": "boost"
       }
     }, 
@@ -610,7 +610,7 @@
         "sched.scene": "touch"
       }, 
       "switch": {
-        "cpu.burst": 0.65, 
+        "cpu.burst": 0.6, 
         "sched.scene": "boost"
       }
     }, 

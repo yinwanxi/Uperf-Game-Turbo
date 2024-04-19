@@ -494,7 +494,7 @@
         "cpu.slowLimitPower": 3.0, 
         "cpu.fastLimitPower": 5.0, 
         "cpu.fastLimitRecoverScale": 0.1, 
-        "cpu.margin": 0.4, 
+        "cpu.margin": 0.6, 
         "sched.scene": "boost"
       }
     }, 

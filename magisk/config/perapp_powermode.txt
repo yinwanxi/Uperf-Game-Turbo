@@ -20,4 +20,4 @@ com.supercell.brawlstars performance
 com.ioncannon.cpuburn.gpugflops fast
 com.primatelabs.geekbench5 fast
 - powersave
-* balance
+* performance

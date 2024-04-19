@@ -1,7 +1,7 @@
 {
   "meta": {
-    "name": "sdm8gen2", 
-    "author": "yc@coolapk   ❤吟惋兮️❤️️"
+    "name": "Google Tensor G3", 
+    "author": "yc@coolapk ❤️吟惋兮❤️"
   }, 
   "modules": {
     "switcher": {
@@ -38,30 +38,30 @@
       "enable": true, 
       "powerModel": [
         {
-          "efficiency": 140, 
-          "nr": 3, 
-          "typicalPower": 0.5, 
-          "typicalFreq": 1.9, 
-          "sweetFreq": 1.6, 
-          "plainFreq": 1.4, 
-          "freeFreq": 0.6
+          "efficiency": 120, 
+          "nr": 4, 
+          "typicalPower": 0.62, 
+          "typicalFreq": 2.2, 
+          "sweetFreq": 1.4, 
+          "plainFreq": 1.2, 
+          "freeFreq": 0.7
         }, 
         {
-          "efficiency": 320, 
+          "efficiency": 300, 
           "nr": 4, 
-          "typicalPower": 1.9, 
-          "typicalFreq": 2.8, 
-          "sweetFreq": 1.8, 
-          "plainFreq": 1.0, 
-          "freeFreq": 0.7
+          "typicalPower": 1.25, 
+          "typicalFreq": 2.5, 
+          "sweetFreq": 1.7, 
+          "plainFreq": 1.2, 
+          "freeFreq": 0.8
         }, 
         {
           "efficiency": 450, 
           "nr": 1, 
-          "typicalPower": 3.6, 
-          "typicalFreq": 3.2, 
-          "sweetFreq": 2.2, 
-          "plainFreq": 1.6, 
+          "typicalPower": 3.15, 
+          "typicalFreq": 3.1, 
+          "sweetFreq": 1.8, 
+          "plainFreq": 1.4, 
           "freeFreq": 0.8
         }
       ]
@@ -69,19 +69,15 @@
     "sysfs": {
       "enable": true, 
       "knob": {
-        "cpuFreqMin0":"/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq",
         "cpusetTa": "/dev/cpuset/top-app/cpus", 
         "cpusetFg": "/dev/cpuset/foreground/cpus", 
         "cpusetBg": "/dev/cpuset/background/cpus", 
         "cpusetSysBg": "/dev/cpuset/system-background/cpus", 
-        "LLCCmax": "/sys/devices/system/cpu/bus_dcvs/LLCC/hw_max_freq",
-        "L3max": "/sys/devices/system/cpu/bus_dcvs/L3/hw_max_freq",
-        "DDRmax": "/sys/devices/system/cpu/bus_dcvs/DDR/hw_max_freq",
         "cpusetRe": "/dev/cpuset/restricted/cpus"
       }
     }, 
     "sched": {
-      "enable": false, 
+      "enable": true, 
       "cpumask": {
         "all": [
           0, 
@@ -91,21 +87,24 @@
           4, 
           5, 
           6, 
-          7
+          7,
+          8
         ], 
         "c0": [
           0, 
           1, 
-          2
+          2, 
+          3
         ], 
         "c1": [
-          3,
           4, 
-          5, 
-          6
+          5,
+          6,
+          7
         ], 
         "c2": [
-          7
+          8
+          
         ]
       }, 
       "affinity": {
@@ -125,10 +124,10 @@
         }, 
         "bg": {
           "bg": "", 
-          "fg": "c1", 
-          "idle": "c1", 
-          "touch": "c1", 
-          "boost": "c1"
+          "fg": "c0", 
+          "idle": "c0", 
+          "touch": "c0", 
+          "boost": "c0"
         }, 
         "ui": {
           "bg": "", 
@@ -151,13 +150,6 @@
           "touch": "c1", 
           "boost": "all"
         }, 
-        "gtcoop": {
-          "bg": "c1", 
-          "fg": "", 
-          "idle": "", 
-          "touch": "", 
-          "boost": ""
-        },
         "gtmain": {
           "bg": "", 
           "fg": "all", 
@@ -209,19 +201,12 @@
           "touch": 97, 
           "boost": 98
         }, 
-        "rtusr": {
-          "bg": 98, 
-          "fg": 98, 
-          "idle": 97, 
-          "touch": 97, 
-          "boost": 98
-        },
-        "fuck": {
+        "rtsys": {
           "bg": 97, 
           "fg": 97, 
           "idle": 96, 
-          "touch": 98, 
-          "boost": 100
+          "touch": 96, 
+          "boost": 97
         }
       }, 
       "rules": [
@@ -286,7 +271,7 @@
           "rules": [
             {
               "k": "^(TaskSnapshot|Greezer|CachedApp|SystemPressure|SensorService)|[Mm]emory", 
-              "ac": "auto", 
+              "ac": "bg", 
               "pc": "auto"
             }, 
             {
@@ -366,18 +351,6 @@
             }
           ]
         }, 
-                {
-          "name": "国产毒瘤我日你仙人",
-          "regex": "^com.tencent.mobileqq|tv.danmaku.bili|com.tencent.mm|com.smile.gifmaker|com.tencent.qqmusic|com.netease.cloudmusic|com.ss.android.ugc.aweme.lite|com.kuaishou.nebula",
-          "pinned": false,
-          "rules": [
-            {
-              "k": ".",
-              "ac": "fuck",
-              "pc": "fuck"
-            }
-          ]
-        },
         {
           "name": "App co-process", 
           "regex": "[.].+:", 
@@ -465,26 +438,22 @@
       "baseSampleTime": 0.01, 
       "baseSlackTime": 0.01, 
       "latencyTime": 0.5, 
-      "slowLimitPower": 4.0, 
-      "fastLimitPower": 8.0, 
-      "fastLimitCapacity": 12.0, 
+      "slowLimitPower": 3.0, 
+      "fastLimitPower": 6.0, 
+      "fastLimitCapacity": 10.0, 
       "fastLimitRecoverScale": 0.3, 
       "predictThd": 0.3, 
-      "margin": 0.18, 
-      "burst": 0, 
+      "margin": 0.22, 
+      "burst": 0.0, 
       "guideCap": true, 
       "limitEfficiency": false
     }, 
     "sysfs": {
-      "LLCCmax":"1066000",
-      "L3max":"1804800",
-      "DDRmax":"4224000",
-      "cpuFreqMin0":"307200",
-      "cpusetTa": "0-7", 
-      "cpusetFg": "0-2,6-7", 
-      "cpusetBg": "0-2", 
-      "cpusetSysBg": "0-2", 
-      "cpusetRe": "0-6"
+      "cpusetTa": "0-8", 
+      "cpusetFg": "0-3,6-7", 
+      "cpusetBg": "0-3", 
+      "cpusetSysBg": "0-4", 
+      "cpusetRe": "0-5"
     }, 
     "sched": {
       "scene": "idle"
@@ -493,17 +462,16 @@
   "presets": {
     "balance": {
       "*": {
-        "sysfs.cpuFreqMin0":"1017600",
         "cpu.latencyTime": 0.2, 
         "cpu.slowLimitPower": 2.0, 
         "cpu.fastLimitPower": 2.0, 
         "cpu.fastLimitCapacity": 16.0, 
-        "cpu.margin": 0.21
+        "cpu.margin": 0.2
       }, 
       "idle": {
         "cpu.baseSampleTime": 0.04, 
         "cpu.baseSlackTime": 0.08, 
-        "cpu.predictThd": 0.2, 
+        "cpu.predictThd": 0.3, 
         "cpu.limitEfficiency": true, 
         "sched.scene": "idle"
       }, 
@@ -513,33 +481,33 @@
       }, 
       "trigger": {
         "cpu.latencyTime": 0.0, 
-        "cpu.margin": 0.3, 
-        "sched.scene": "touch"
-      }, 
-      "gesture": {
         "cpu.margin": 0.4, 
         "sched.scene": "touch"
       }, 
+      "gesture": {
+        "cpu.margin": 0.6, 
+        "sched.scene": "touch"
+      }, 
       "junk": {
-        "cpu.burst": 0.6, 
+        "cpu.burst": 0.7, 
         "sched.scene": "touch"
       }, 
       "switch": {
         "cpu.latencyTime": 0.0, 
-        "cpu.slowLimitPower": 6.0, 
-        "cpu.fastLimitPower": 8.0, 
+        "cpu.slowLimitPower": 3.0, 
+        "cpu.fastLimitPower": 5.0, 
         "cpu.fastLimitRecoverScale": 0.1, 
-        "cpu.margin": 0.65, 
+        "cpu.margin": 0.6, 
         "sched.scene": "boost"
       }
     }, 
     "powersave": {
       "*": {
-        "cpu.latencyTime": 0.8, 
+        "cpu.latencyTime": 0.4, 
         "cpu.slowLimitPower": 1.0, 
         "cpu.fastLimitPower": 1.0, 
-        "cpu.fastLimitCapacity": 1.0, 
-        "cpu.margin": 0.1
+        "cpu.fastLimitCapacity": 2.0, 
+        "cpu.margin": 0.05
       }, 
       "idle": {
         "cpu.baseSampleTime": 0.04, 
@@ -558,72 +526,64 @@
         "sched.scene": "touch"
       }, 
       "gesture": {
-        "cpu.margin": 0.1, 
+        "cpu.margin": 0.2, 
         "sched.scene": "touch"
       }, 
       "junk": {
-        "cpu.burst": 0.08, 
+        "cpu.burst": 0.2, 
         "sched.scene": "touch"
       }, 
       "switch": {
         "cpu.latencyTime": 0.0, 
-        "cpu.slowLimitPower": 1.0, 
-        "cpu.fastLimitPower": 2.0, 
+        "cpu.slowLimitPower": 1.5, 
+        "cpu.fastLimitPower": 1.5, 
         "cpu.fastLimitRecoverScale": 0.1, 
-        "cpu.margin": 0.1, 
+        "cpu.margin": 0.2, 
         "sched.scene": "boost"
       }
     }, 
     "performance": {
       "*": {
-        "sysfs.cpuFreqMin0":"1228800",
-        "sysfs.LLCCmax": 999999999,
-        "sysfs.L3max": 999999999,
-        "sysfs.DDRmax": 999999999,
         "cpu.latencyTime": 0.0, 
         "cpu.slowLimitPower": 999.0, 
         "cpu.fastLimitPower": 999.0, 
         "cpu.fastLimitCapacity": 999.0, 
-        "cpu.margin": 0.2,
-        "cpu.burst": 0.22
+        "cpu.margin": 0.3,
+        "cpu.burst": 0.2
       }, 
       "idle": {
+        "cpu.baseSampleTime": 0.01, 
+        "cpu.baseSlackTime": 0.04, 
         "sched.scene": "idle"
       }, 
       "touch": {
-        "cpu.margin": 0.4,
-        "cpu.latencyTime": 0.0,
+        "cpu.margin": 0.45, 
         "sched.scene": "touch"
       }, 
       "trigger": {
         "cpu.margin": 0.5, 
-        "cpu.latencyTime": 0.0,
         "sched.scene": "touch"
       }, 
       "gesture": {
-        "cpu.margin": 0.45, 
+        "cpu.margin": 0.6, 
         "sched.scene": "touch"
       }, 
       "junk": {
-        "cpu.burst": 0.55, 
-        "cpu.latencyTime": 0.0,
+        "cpu.burst": 0.8, 
         "sched.scene": "touch"
       }, 
       "switch": {
-        "cpu.burst": 0.65, 
+        "cpu.burst": 0.5, 
         "sched.scene": "boost"
       }
     }, 
     "fast": {
       "*": {
-        "sysfs.LLCCmax": 999999999,
-        "sysfs.L3max": 999999999,
-        "sysfs.DDRmax": 999999999,
         "cpu.latencyTime": 0.0, 
         "cpu.slowLimitPower": 999.0, 
         "cpu.fastLimitPower": 999.0, 
         "cpu.fastLimitCapacity": 999.0, 
-        "cpu.burst": 1.0
+        "cpu.margin": 1.0
       }, 
       "idle": {
         "sched.scene": "idle"
@@ -642,28 +602,6 @@
       }, 
       "switch": {
         "sched.scene": "boost"
-      }
-    },
-    "crazy":{
-      "*": {
-        "cpu.latencyTime": 0.0, 
-        "cpu.slowLimitPower": 999.0, 
-        "cpu.fastLimitPower": 999.0, 
-        "cpu.fastLimitCapacity": 999.0, 
-        "cpu.margin": 1.0,
-        "cpu.burst": 1.0
-      }, 
-      "idle": {
-      }, 
-      "touch": {
-      }, 
-      "trigger": {
-      }, 
-      "gesture": {
-      }, 
-      "junk": {
-      }, 
-      "switch": {
       }
     }
   }

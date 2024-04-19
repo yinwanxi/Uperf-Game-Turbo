@@ -441,7 +441,7 @@
             "fastLimitCapacity": 10,
             "fastLimitRecoverScale": 0.3,
             "predictThd": 0.3,
-            "margin": 0.2,
+            "margin": 0.25,
             "burst": 0,
             "guideCap": true,
             "limitEfficiency": false
@@ -464,9 +464,9 @@
                 "cpu.latencyTime": 0.2,
                 "cpu.slowLimitPower": 2,
                 "cpu.fastLimitPower": 2,
-                "cpu.fastLimitCapacity": 14,
-                "cpu.fastLimitRecoverScale": 15,
-                "cpu.margin": 0.2,
+                "cpu.fastLimitCapacity": 16,
+                "cpu.fastLimitRecoverScale": 16,
+                "cpu.margin": 0.25,
                 "sysfs.ddrMin": "3200000000"
             },
             "idle": {
@@ -477,24 +477,24 @@
                 "sched.scene": "touch"
             },
             "trigger": {
-                "cpu.margin": 0.35,
+                "cpu.margin": 0.48,
                 "sched.scene": "touch"
             },
             "gesture": {
-                "cpu.margin": 0.4,
+                "cpu.margin": 0.53,
                 "sched.scene": "touch"
             },
             "junk": {
-                "cpu.burst": 0.6,
+                "cpu.burst": 0.63,
                 "sched.scene": "touch",
                 "cpu.limitEfficiency": true,
                 "sysfs.ddrMin": "5500000000"
             },
             "switch": {
                 "cpu.latencyTime": 0,
-                "cpu.slowLimitPower": 3,
-                "cpu.fastLimitPower": 5,
-                "cpu.margin": 0.4,
+                "cpu.slowLimitPower": 5,
+                "cpu.fastLimitPower": 16,
+                "cpu.margin": 0.6,
                 "cpu.limitEfficiency": true,
                 "sched.scene": "boost",
                 "sysfs.ddrMin": "3200000000"
@@ -550,7 +550,7 @@
                 "cpu.fastLimitCapacity": 999,
                 "cpu.fastLimitRecoverScale": 999,
                 "cpu.margin": 0.25,
-                "cpu.burst": 0.25,
+                "cpu.burst": 0.2,
                 "sysfs.ddrMin": "5500000000"
             },
             "idle": {
@@ -559,23 +559,23 @@
                 "sched.scene": "idle"
             },
             "touch": {
-                "cpu.margin": 0.55,
+                "cpu.margin": 0.45,
                 "sched.scene": "touch"
             },
             "trigger": {
-                "cpu.margin": 0.6,
+                "cpu.margin": 0.55,
                 "sched.scene": "touch"
             },
             "gesture": {
-                "cpu.margin": 0.5,
+                "cpu.margin": 0.6,
                 "sched.scene": "touch"
             },
             "junk": {
-                "cpu.burst": 0.68,
+                "cpu.burst": 0.55,
                 "sched.scene": "touch"
             },
             "switch": {
-                "cpu.burst": 0.2,
+                "cpu.burst": 0.7,
                 "sched.scene": "boost"
             }
         },

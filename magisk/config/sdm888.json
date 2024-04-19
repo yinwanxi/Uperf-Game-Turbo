@@ -452,7 +452,7 @@
             "fastLimitCapacity": 6.0,
             "fastLimitRecoverScale": 0.2,
             "predictThd": 0.6,
-            "margin": 0.2,
+            "margin": 0.23,
             "burst": 0.0,
             "guideCap": true,
             "limitEfficiency": true
@@ -521,7 +521,7 @@
                 "sched.scene": "touch"
             },
             "switch": {
-                "cpu.margin": 0.4,
+                "cpu.margin": 0.7,
                 "sched.scene": "boost"
             }
         },
@@ -604,7 +604,7 @@
                 "sched.scene": "touch"
             },
             "switch": {
-                "cpu.margin": 0.3,
+                "cpu.margin": 0.8,
                 "sched.scene": "boost"
             }
         },

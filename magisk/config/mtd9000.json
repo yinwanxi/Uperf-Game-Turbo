@@ -443,7 +443,7 @@
             "fastLimitCapacity": 10,
             "fastLimitRecoverScale": 0.3,
             "predictThd": 0.3,
-            "margin": 0.18,
+            "margin": 0.25,
             "burst": 0,
             "guideCap": true,
             "limitEfficiency": false
@@ -472,7 +472,7 @@
                 "cpu.fastLimitPower": 2,
                 "cpu.fastLimitCapacity": 16,
                 "cpu.fastLimitRecoverScale": 15,
-                "cpu.margin": 0.2,
+                "cpu.margin": 0.25,
                 "sysfs.ddrMin": "3200000000"
             },
             "idle": {
@@ -483,15 +483,15 @@
                 "sched.scene": "touch"
             },
             "trigger": {
-                "cpu.margin": 0.3,
-                "sched.scene": "touch"
-            },
-            "gesture": {
                 "cpu.margin": 0.4,
                 "sched.scene": "touch"
             },
+            "gesture": {
+                "cpu.margin": 0.5,
+                "sched.scene": "touch"
+            },
             "junk": {
-                "cpu.burst": 0.5,
+                "cpu.burst": 0.6,
                 "sched.scene": "touch",
                 "cpu.limitEfficiency": true,
                 "sysfs.ddrMin": "5500000000"
@@ -500,7 +500,7 @@
                 "cpu.latencyTime": 0,
                 "cpu.slowLimitPower": 6,
                 "cpu.fastLimitPower": 13.5,
-                "cpu.margin": 0.5,
+                "cpu.margin": 0.6,
                 "cpu.limitEfficiency": true,
                 "sched.scene": "boost",
                 "sysfs.ddrMin": "5500000000"
@@ -569,15 +569,15 @@
                 "sched.scene": "idle"
             },
             "touch": {
-                "cpu.margin": 0.55,
+                "cpu.margin": 0.58,
                 "sched.scene": "touch"
             },
             "trigger": {
-                "cpu.margin": 0.6,
+                "cpu.margin": 0.65,
                 "sched.scene": "touch"
             },
             "gesture": {
-                "cpu.margin": 0.55,
+                "cpu.margin": 0.58,
                 "sched.scene": "touch"
             },
             "junk": {
@@ -585,7 +585,7 @@
                 "sched.scene": "touch"
             },
             "switch": {
-                "cpu.burst": 0.4,
+                "cpu.burst": 0.7,
                 "sched.scene": "boost"
             }
         },
