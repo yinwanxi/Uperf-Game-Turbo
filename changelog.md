@@ -1,6 +1,6 @@
 # 更新日志
 
-## Uperf-Game-Turbo1.33
+## Uperf-Game-Turbo1.34
 
 【更新内容】
 - 优化日常使用卡顿，切换应用卡顿等问题
