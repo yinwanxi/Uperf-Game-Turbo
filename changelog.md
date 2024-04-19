@@ -15,13 +15,13 @@
 - 更新内置asoul
 
 [Update Content]
--Optimize daily usage lag, application switching lag, and other issues
--Update power consumption models for some models
--Targeted optimization of some processors
--Installation script update, processor recognition added judgment
--Fix bugs with abnormal power consumption in some models
--Optimize some models for abnormal lag bugs
--Modify performance, balance mode strategy, and optimize user experience
--Adapt to multiple languages
--Remove some processor performance limitations
--Update built-in asoul version
+- Optimize daily usage lag, application switching lag, and other issues
+- Update power consumption models for some models
+- Targeted optimization of some processors
+- Installation script update, processor recognition added judgment
+- Fix bugs with abnormal power consumption in some models
+- Optimize some models for abnormal lag bugs
+- Modify performance, balance mode strategy, and optimize user experience
+- Adapt to multiple languages
+- Remove some processor performance limitations
+- Update built-in asoul version
