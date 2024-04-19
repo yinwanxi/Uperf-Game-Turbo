@@ -1,8 +1,8 @@
 id=uperf
 name=Uperf Game Turbo
-version=️1.33 based on uperf 904
-versionCode=240131
+version=️1.34 based on uperf 904
+versionCode=240311
 author=Matt Yang（吟惋兮改）
-description=极速模式请自备散热，删除温控体验更佳，本模块与部分乱七八糟的优化，所有的降频模块冲突，请自行卸载，内置sf和asoul，非强制绑定版本，可自行选择版本，有问题请反馈酷安@吟惋兮~❤️
+description=❤️欢迎使用Uperf Game Turbo，使用时有问题可反馈至yinwanxi0107@gmail.com❤️///❤️Welcome to use Uperf Game Turbo. If you have any questions, please send feedback to yinwanxi0107@gmail.com❤️
 updateJson=https://github.com/yinwanxi/Uperf-Game-Turbo/raw/master/version.json
-ASOPT_VERSIONCODE=257
+ASOPT_VERSIONCODE=260

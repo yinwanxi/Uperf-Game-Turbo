@@ -1,5 +1,3 @@
-dalvik.vm.heapmaxfree=8m
-dalvik.vm.heapminfree=2m
 ro.mtk_perf_simple_start_win=0
 ro.mtk_perf_response_time=0
 ro.mtk_perf_fast_start_win=0
