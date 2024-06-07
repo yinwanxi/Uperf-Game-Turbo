@@ -124,12 +124,19 @@ _get_pinekala_type() {
     fi
 }
 
+_get_kalama_type() {
+    if [ "$(get_maxfreq 7)" -gt 3300000 ]; then
+        echo "sdm8cxg2"
+        else
+        echo "sdm8g2"
+    fi
+}
 
 # $1:board_name
 get_config_name() {
     case "$1" in
     "pineapple") echo "$(_get_pinekala_type)" ;;
-    "kalama") echo "sdm8g2" ;;
+    "kalama") echo "$(_get_pinekala_type)" ;;
     "taro") echo "$(_get_taro_type)" ;;
     "lahaina") echo "$(_get_lahaina_type)" ;;
     "shima") echo "$(_get_lahaina_type)" ;;
@@ -182,6 +189,9 @@ get_config_name() {
     "mt6779") echo "mtp90" ;;
     "mt6789") echo "mtg99" ;;
     "mt6785") echo "mtg90t" ;;
+    "Infinix-X6827") echo "mtg96" ;;
+    "mt6827") echo "mtg96" ;;
+    "mt6795") echo "mtx10" ;;
     "mt6797") echo "mtx20" ;;
     "mt6833") echo "mtd720" ;;
     "mt6833p") echo "mtd720" ;; # Dimensity 810
@@ -190,6 +200,8 @@ get_config_name() {
     "mt6873") echo "mtd820" ;;
     "mt6875") echo "mtd820" ;;
     "mt6877") echo "mtd920" ;;
+    "mt6855") echo "mtd930" ;;
+    "cancunf") echo "mtd930" ;;
     "mt6885") echo "mtd1000" ;;
     "mt6886") echo "mtd7000" ;;
     "mt6889") echo "mtd1000" ;;
@@ -228,6 +240,18 @@ get_config_name() {
     "kirin970") echo "kirin970" ;;
     "ELE") echo "kirin980" ;;
     "kirin980") echo "kirin980" ;;
+    "kirin990") echo "kirin990" ;;
+    "LIO-AL00") echo "kirin990" ;;
+    "OXP-AN00") echo "kirin990" ;;
+    "ANA-AN00") echo "kirin990" ;;
+    "ELS-AN10") echo "kirin990" ;;
+    "EBG-AN00") echo "kirin990" ;;
+    "TAS-AN00") echo "kirin990" ;;
+    "LIO-AN00P") echo "kirin990" ;;
+    "OXF-AN00") echo "kirin990" ;;
+    "OCE-AL50") echo "kirin990" ;;
+    "SCMR-W09") echo "kirin990" ;;
+    "TAH-AN00m") echo "kirin990" ;;
     "hi3650") echo "kirin955" ;;
     "FRD") echo "kirin955" ;;
     "EVA-TL00") echo "kirin955" ;;
@@ -242,6 +266,8 @@ get_config_name() {
     "ums512_1h10") echo "t618" ;;
     "ud710_7h10") echo "t710" ;;
     "ums9620_2h10") echo "t770" ;;
+    "sp9832e") echo "sp9832" ;;
+    "sp9832e_1h10") echo "sp9832" ;;
     *) echo "unsupported" ;;
     esac
 }
