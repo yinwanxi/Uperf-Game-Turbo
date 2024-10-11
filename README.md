@@ -21,7 +21,7 @@
 
 ## 下载
 
-https://github.com/yc9559/uperf/releases
+https://github.com/yinwanxi/Uperf-Game-Turbo/releases
 
 ## 安装
 
@@ -554,9 +554,3 @@ UFS节能开关的`sysfs`节点路径为`/sys/devices/platform/soc/1d84000.ufshc
 - emptybot08(github)  
 - ahzhi(github)  
 - Saumer7(github)  
-
-## 捐赠
-
-如果你实在愿意，下面是感谢云讨饭通道(备注写上你的ID和来源平台)：  
-
-![](media/alipay-qr.png)
