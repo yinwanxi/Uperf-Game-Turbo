@@ -1,6 +1,6 @@
 # 更新日志
 
-## Uperf-Game-Turbo1.36
+## Uperf-Game-Turbo1.38
 
 【更新内容】
 
