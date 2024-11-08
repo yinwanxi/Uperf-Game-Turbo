@@ -136,11 +136,12 @@ _get_kalama_type() {
 get_config_name() {
     case "$1" in
     "pineapple") echo "$(_get_pinekala_type)" ;;
-    "kalama") echo "$(_get_pinekala_type)" ;;
+    "kalama") echo "$(_get_kalama_type)" ;;
     "taro") echo "$(_get_taro_type)" ;;
     "lahaina") echo "$(_get_lahaina_type)" ;;
     "shima") echo "$(_get_lahaina_type)" ;;
     "yupik") echo "$(_get_lahaina_type)" ;;
+    "sun") echo "sdm8g4" ;;
     "kona") echo "sdm865" ;;    # 865, 870
     "msmnile") echo "sdm855" ;; # 855, 860
     "sdm845") echo "sdm845" ;;
@@ -176,6 +177,7 @@ get_config_name() {
     "exynos990") echo "e990" ;;
     "universal1080") echo "e1080" ;;
     "universal990") echo "e990" ;;
+    "universal5420") echo "e5420" ;;
     "universal9825") echo "e9820" ;;
     "universal9820") echo "e9820" ;;
     "universal9810") echo "e9810" ;;
@@ -186,6 +188,7 @@ get_config_name() {
     "mt6765") echo "mtp35" ;; # Helio P35(mt6765)/G35(mt6765g)/G37(mt6765h)
     "mt6768") echo "mtg80" ;; # Helio P65(mt6768)/G70(mt6769v)/G80(mt6769t)/G85(mt6769z)
     "mt6771") echo "mtp70" ;;
+    "mt8175") echo "mt8173" ;;
     "mt6779") echo "mtp90" ;;
     "mt6789") echo "mtg99" ;;
     "mt6785") echo "mtg90t" ;;
@@ -196,6 +199,7 @@ get_config_name() {
     "mt6833") echo "mtd720" ;;
     "mt6833p") echo "mtd720" ;; # Dimensity 810
     "mt6833v") echo "mtd720" ;; # Dimensity 810
+    "mt6835") echo "mtd6000" ;;
     "mt6853") echo "mtd720" ;;
     "mt6873") echo "mtd820" ;;
     "mt6875") echo "mtd820" ;;
@@ -211,12 +215,15 @@ get_config_name() {
     "mt6897") echo "mtd8300" ;;
     "mt6983") echo "mtd9000" ;;
     "mt6985") echo "mtd9200" ;;
+    "mt6989") echo "mtd9300" ;;
+    "mt6991") echo "mtd9400" ;;
     "gs101") echo "gs101" ;;
     "gs201") echo "gs201" ;;
     "cheetah") echo "gs201" ;;
     "husky") echo "gs301" ;;
     "zuma") echo "gs301" ;;
     "shiba") echo "gs301" ;;
+    "comet") echo "gs401" ;;
     "PRL") echo "kirin65x" ;;
     "BLN") echo "kirin65x" ;;
     "hi6250") echo "kirin65x" ;;
@@ -252,22 +259,26 @@ get_config_name() {
     "OCE-AL50") echo "kirin990" ;;
     "SCMR-W09") echo "kirin990" ;;
     "TAH-AN00m") echo "kirin990" ;;
+    "kirin9000") echo "kirin9000" ;;
+    "JAD") echo "kirin9000" ;;
     "hi3650") echo "kirin955" ;;
     "FRD") echo "kirin955" ;;
     "EVA-TL00") echo "kirin955" ;;
     "kirin955") echo "kirin955" ;;
     "sp9863a") echo "sp9863" ;;
-    "sp9863a_1h10") echo "sp9863" ;;
+    "ums312") echo "t310" ;;
     "ums9230") echo "t606" ;;
     "ums512") echo "t618" ;;
     "ud710") echo "t710" ;;
     "ums9620") echo "t770" ;;
+    "sp9832e") echo "sp9832" ;;
+    "ums312_2h10") echo "t310" ;;
     "ums9230_1h10") echo "t606" ;;
     "ums512_1h10") echo "t618" ;;
     "ud710_7h10") echo "t710" ;;
     "ums9620_2h10") echo "t770" ;;
-    "sp9832e") echo "sp9832" ;;
     "sp9832e_1h10") echo "sp9832" ;;
+    "sp9863a_1h10") echo "sp9863" ;;
     *) echo "unsupported" ;;
     esac
 }
