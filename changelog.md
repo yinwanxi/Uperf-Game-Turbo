@@ -4,22 +4,26 @@
 
 【更新内容】
 
-- 修复处理器识别bug
+- 修复部分处理器启动bug
 - 更新处理器识别脚本，优化使用体验
-- 修复部分处理器启动异常
-- 修复部分处理器功耗异常问题
+- 修复部分处理器功耗bug
+- 修复部分处理器卡顿问题
 - 优化部分机型日常使用体验
-- 修复部分处理器游戏体验较差问题
+- 优化部分处理器游戏体验较差问题
 - 优化功耗和流畅度
+- 更多处理器增加彩蛋模式（crazy mode)
+- 优化功耗模型
 - 更新内置asoul版本
 
-【Update Content】
+[Update content]
 
-- Fix processor identification bug
-- Update processor identification script to optimize the user experience
-- Fix abnormal startup of some processors
-- Fix abnormal power consumption of some processors
-- Optimize the daily use experience of some models
-- Fix the problem of poor gaming experience of some processors
-- Optimize power consumption and fluency
+- Fixed some processor startup bugs
+- Updated processor recognition scripts to optimize user experience
+- Fixed some processor power consumption bugs
+- Fixed some processor stuttering issues
+- Optimized the daily usage experience of some models
+- Optimized the issue of poor gaming experience on some processors
+- Optimize power consumption and smoothness
+- More processors add Crazy Mode
+- Optimize the power consumption model
 - Update the built-in asoul version
