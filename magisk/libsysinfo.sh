@@ -153,6 +153,7 @@ get_config_name() {
     "msm8909") echo "sdm210" ;;
     "msm8996pro") echo "sdm820" ;;
     "s5e9925") echo "e2200" ;;
+    "s5e9945") echo "e2400" ;;
     "exynos2100") echo "e2100" ;;
     "erd8835") echo "e1380" ;;
     "universal9925") echo "e2200" ;;
