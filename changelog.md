@@ -1,33 +1,26 @@
 # 更新日志
 
-## Uperf-Game-Turbo1.43
+## Uperf-Game-Turbo1.44
 
 【更新内容】
 
-    ✅ 修复部分冲突问题
-    ✅ 优化运行速度
-    ✅ 增加语言检测
-    ✅ 增加安装倒计时
-    ✅ 安装逻辑优化，安装程序优化
-    ✅ 调整调度策略
-    ✅ 调整处理器配置，优化使用体验
-    ✅ 部分季节性调整
-    ✅ 调整一些性能释放策略
-    ✅ 修复部分卡顿问题
-    ✅ 修复部分处理器异常功耗问题
+    ✅ 季节适应性调整
+    ✅ 修复启动失败bug
+    ✅ 部分处理器功耗模型调整
+    ✅ 部分处理器功耗均衡调整
+    ✅ 安装提示调整
+    ✅ 修复一些小bug
+    ✅ 部分处理器小调整
     ✅ 更新内置 ASOUL 版本
 
 【Update Details】
 
-    ✅ Fixed certain compatibility issues
-    ✅ Optimized performance speed
+    ✅ Seasonal adaptability adjustments
+    ✅ Fixed startup failure bug
     ✅ Added language detection
-    ✅ Added installation countdown timer
-    ✅ Improved installation logic and installer optimization
-    ✅ Adjusted scheduling strategy
-    ✅ Tweaked processor configurations for better user experience
-    ✅ Seasonal adjustments
-    ✅ Adjusted some performance release strategies
-    ✅ Fixed occasional stuttering issues
-    ✅ Fixed abnormal power consumption in some processors
+    ✅ Adjusted power consumption models for some processors
+    ✅ Optimized power consumption balance for certain processors
+    ✅ Installation prompts updated
+    ✅ Fixed some bugs
+    ✅ Minor tweaks for some processors
     ✅ Updated built-in ASOUL version
