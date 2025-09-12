@@ -4,20 +4,26 @@
 
 【更新内容】
 
-    ✅ 适配了更多处理器
-    ✅ 调整部分处理器性能配置
-    ✅ 调整CPU冗余配置
-    ✅ 调整各模式功耗和性能释放，均衡使用体验
-    ✅ 修复一个古老bug，移除一些无用代码
-    ✅ 更新内置asoul版本
-    ✅ 更新内置 ASOUL 版本
+✅ 更新大部分处理器配置参数
+✅ 调整部分处理器识别
+✅ 调整日常使用性能释放
+✅ 重新配置均衡、性能模式的功耗和输出表现
+✅ 修复偶发性卡顿bug
+✅ 适配更多处理器
+✅ 根据季节性变化做出对应调整
+✅ 修复部分卡顿抽帧
+✅ 修复部分游戏异常问题
+✅ 更新内置asoul版本
 
 【Update Details】
 
-    ✅ More processors are adapted
-    ✅ Adjust the performance configuration of some processors
-    ✅ Adjust the CPU redundancy configuration
-    ✅ Adjust the power consumption and performance release of each mode to balance the user experience
-    ✅ Fix an old bug and remove some useless code
-    ✅ Update the built-in asoul version
-    ✅ Updated built-in ASOUL version
+✅ Updated most processor configuration parameters✅ Updated most processor configuration parameters
+✅ Adjusted some processor identification
+✅ Adjusted performance for daily use
+✅ Reconfigured power consumption and output performance for Balanced and Performance modes
+✅ Fixed occasional lag bugs
+✅ Supported more processors
+✅ Adjusted for seasonal changes
+✅ Fixed some lag and frame drops
+✅ Fixed some game anomalies
+✅ Update built-in asoul version
