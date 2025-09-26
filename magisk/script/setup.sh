@@ -133,7 +133,8 @@ install_corp() {
             rm -rf /data/adb/modules*/asoul_affinity_opt
             echo "- 正在为您安装asopt"
             echo "- Installing️"
-            magisk --install-module "$MODULE_PATH"/modules/asoulopt.zip
+            ZIPFILE="$MODULE_PATH/modules/asoulopt.zip"
+            install_module
         else
             echo "* 您正在使用新版本的asopt"
             echo "* Uperf Game Turbo将不予操作️"
@@ -149,7 +150,8 @@ install_corp() {
         rm -rf /data/adb/modules*/asoul_affinity_opt
         echo "- 正在为您安装asopt"
         echo "- Installing asopt for you"
-        magisk --install-module "$MODULE_PATH"/modules/asoulopt.zip
+        ZIPFILE="$MODULE_PATH/modules/asoulopt.zip"
+        install_module
     fi
     rm -rf "$MODULE_PATH"/modules/asoulopt.zip
 }
